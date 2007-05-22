@@ -250,24 +250,165 @@
 #ifdef DEBUG
 	NSLog(@"This version is %@, the new version is %@", thisVersion, newVer);
 #endif
-	if (newVer && ![newVer isEqualToString:thisVersion])
-	{ // then its a new version.  We're not going to count backwards!
-		int returnCode = NSRunInformationalAlertPanel(NSLocalizedString(@"New Version",@""),
-													  [NSString stringWithFormat:NSLocalizedString(@"A new version of Meteo (%@) is available; would you like to visit the web site?",@""),newVer],
-													  NSLocalizedString(@"Visit Web Site",@""), 
-													  NSLocalizedString(@"Cancel",@""),
-													  nil);
-		if (returnCode == NSAlertDefaultReturn) // visit website
-			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://heat-meteo.sourceforge.net/"]];
-    } else if (sender != nil)
-	{
-		NSRunInformationalAlertPanel(NSLocalizedString(@"No new Version",@""),
-									 [NSString stringWithFormat:NSLocalizedString(@"You have the most recent version of Meteorologist",@"")],
-									 NSLocalizedString(@"OK",@""), 
-									 nil,
-									 nil);
-	}
+
+    if (newVer) {
+        NSComparisonResult res = [self compareVersion:thisVersion toVersion:newVer];
+        
+        //if (newVer && ![newVer isEqualToString:thisVersion])
+        if (res == NSOrderedDescending)
+        { // then its a new version.  We're not going to count backwards!
+            int returnCode = NSRunInformationalAlertPanel(NSLocalizedString(@"New Version",@""),
+                                                          [NSString stringWithFormat:NSLocalizedString(@"Version %@ of Meteorologist is available (your version %@).  Would you like to visit the web site?",@""),newVer,thisVersion],
+                                                          NSLocalizedString(@"Visit Web Site",@""), 
+                                                          NSLocalizedString(@"Cancel",@""),
+                                                          nil);
+            if (returnCode == NSAlertDefaultReturn) // visit website
+                [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://heat-meteo.sourceforge.net/"]];
+        } else if (sender != nil)
+        {
+            NSRunInformationalAlertPanel(NSLocalizedString(@"No New Version",@""),
+                                         [NSString stringWithFormat:NSLocalizedString(@"You have the most recent version of Meteorologist.",@"")],
+                                         NSLocalizedString(@"OK",@""), 
+                                         nil,
+                                         nil);
+        }
+    }
+    else if (sender != nil) {
+         NSRunInformationalAlertPanel(NSLocalizedString(@"Server Unreachable",@""),
+                                         NSLocalizedString(@"The server could not be reached to determine the most recent version of Meteorologist.",@""),
+                                         NSLocalizedString(@"OK",@""), 
+                                         nil,
+                                         nil);
+    
+    }
 	[pool release];
+}
+
+- (NSComparisonResult)compareVersion:(NSString *)versionA toVersion:(NSString *)versionB
+{
+    NSArray *partsA = [self splitVersion:versionA];
+    NSArray *partsB = [self splitVersion:versionB];
+    
+    NSString *partA, *partB;
+    int i, n, typeA, typeB, intA, intB;
+    
+    n = MIN([partsA count], [partsB count]);
+    for (i = 0; i < n; ++i) {
+        partA = [partsA objectAtIndex:i];
+        partB = [partsB objectAtIndex:i];
+        
+        typeA = [self getCharType:partA];
+        typeB = [self getCharType:partB];
+        
+        // Compare types
+        if (typeA == typeB) {
+            // Same type; we can compare
+            if (typeA == kNumberType) {
+                intA = [partA intValue];
+                intB = [partB intValue];
+                if (intA > intB) {
+                    return NSOrderedAscending;
+                } else if (intA < intB) {
+                    return NSOrderedDescending;
+                }
+            } else if (typeA == kStringType) {
+                NSComparisonResult result = [partA compare:partB];
+                if (result != NSOrderedSame) {
+                    return result;
+                }
+            }
+        } else {
+            // Not the same type? Now we have to do some validity checking
+            if (typeA != kStringType && typeB == kStringType) {
+                // typeA wins
+                return NSOrderedAscending;
+            } else if (typeA == kStringType && typeB != kStringType) {
+                // typeB wins
+                return NSOrderedDescending;
+            } else {
+                // One is a number and the other is a period. The period is invalid
+                if (typeA == kNumberType) {
+                    return NSOrderedAscending;
+                } else {
+                    return NSOrderedDescending;
+                }
+            }
+        }
+    }
+    // The versions are equal up to the point where they both still have parts
+    // Lets check to see if one is larger than the other
+    if ([partsA count] != [partsB count]) {
+        // Yep. Lets get the next part of the larger
+        // n holds the value we want
+        NSString *missingPart;
+        int missingType, shorterResult, largerResult;
+        
+        if ([partsA count] > [partsB count]) {
+            missingPart = [partsA objectAtIndex:n];
+            shorterResult = NSOrderedDescending;
+            largerResult = NSOrderedAscending;
+        } else {
+            missingPart = [partsB objectAtIndex:n];
+            shorterResult = NSOrderedAscending;
+            largerResult = NSOrderedDescending;
+        }
+        
+        missingType = [self getCharType:missingPart];
+        // Check the type
+        if (missingType == kStringType) {
+            // It's a string. Shorter version wins
+            return shorterResult;
+        } else {
+            // It's a number/period. Larger version wins
+            return largerResult;
+        }
+    }
+    
+    // The 2 strings are identical
+    return NSOrderedSame;
+}
+
+- (NSArray *)splitVersion:(NSString *)version
+{
+    NSString *character;
+    NSMutableString *s;
+    int i, n, oldType, newType;
+    NSMutableArray *parts = [NSMutableArray array];
+    if ([version length] == 0) {
+        // Nothing to do here
+        return parts;
+    }
+    s = [[[version substringToIndex:1] mutableCopy] autorelease];
+    oldType = [self getCharType:s];
+    n = [version length] - 1;
+    for (i = 1; i <= n; ++i) {
+        character = [version substringWithRange:NSMakeRange(i, 1)];
+        newType = [self getCharType:character];
+        if (oldType != newType || oldType == kPeriodType) {
+            // We've reached a new segment
+            [parts addObject:[s copy]];
+            [s setString:character];
+        } else {
+            // Add character to string and continue
+            [s appendString:character];
+        }
+        oldType = newType;
+    }
+    
+    // Add the last part onto the array
+    [parts addObject:[s copy]];
+    return parts;
+}
+
+- (int)getCharType:(NSString *)character
+{
+    if ([character isEqualToString:@"."]) {
+        return kPeriodType;
+    } else if ([character isEqualToString:@"0"] || [character intValue] != 0) {
+        return kNumberType;
+    } else {
+        return kStringType;
+    }
 }
 
 - (NSString *)checkForNewServerErrors

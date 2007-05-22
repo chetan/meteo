@@ -72,17 +72,17 @@
 		<dict>
 			<key>choicesFound</key>
 			<array>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>. &lt;A HREF="/weather/local/</string>
+                <dict>
 					<key>multipleMatchString</key>
 					<string>Cities (1 -</string>
+					<key>codeStart</key>
+					<string>. &lt;A HREF="/weather/local/</string>
+                    <key>codeEnd</key>
+					<string>?</string>
+					<key>nameStart</key>
+					<string>;"&gt;</string>
 					<key>nameEnd</key>
 					<string>&lt;/A&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;</string>
 					<key>parseOrder</key>
 					<array>
 						<string>code</string>
@@ -93,13 +93,30 @@
 					<key>codeEnd</key>
 					<string>?</string>
 					<key>codeStart</key>
-					<string>&lt;/B&gt; &lt;A HREF="/weather/local/</string>
+					<string>.&lt;/B&gt; &lt;A HREF="/weather/local/</string> 
 					<key>multipleMatchString</key>
 					<string>Cities (1 -</string>
 					<key>nameEnd</key>
-					<string>&lt;/B&gt;</string>
+					<string>&lt;/B&gt;</string> 
 					<key>nameStart</key>
-					<string>search_city"&gt;&lt;B&gt;</string>
+					<string>)&#59;"&gt;&lt;B&gt;</string> 
+					<key>parseOrder</key>
+					<array>
+						<string>code</string>
+						<string>name</string>
+					</array>
+				</dict>
+				<dict>
+					<key>codeEnd</key>
+					<string>?</string>
+					<key>codeStart</key>
+					<string>. &lt;A HREF="/weather/local/</string> 
+					<key>multipleMatchString</key>
+					<string>Cities (1 -</string>
+					<key>nameEnd</key>
+					<string>&lt;/A&gt;&lt;/B&gt;</string> 
+					<key>nameStart</key>
+					<string>)&#59;"&gt;</string> 
 					<key>parseOrder</key>
 					<array>
 						<string>code</string>
@@ -116,13 +133,13 @@
 					<key>nameEnd</key>
 					<string>&lt;/A&gt;</string>
 					<key>nameStart</key>
-					<string>search_city"&gt;</string>
+					<string>;"&gt;</string>
 					<key>parseOrder</key>
 					<array>
 						<string>code</string>
 						<string>name</string>
 					</array>
-				</dict>
+				</dict>				
 				<dict>
 					<key>codeEnd</key>
 					<string>?</string>
@@ -133,7 +150,7 @@
 					<key>nameEnd</key>
 					<string>&lt;/B&gt;</string>
 					<key>nameStart</key>
-					<string>search_city"&gt;&lt;B&gt;</string>
+					<string>;&gt;&lt;B&gt;</string>
 					<key>parseOrder</key>
 					<array>
 						<string>code</string>
@@ -141,95 +158,7 @@
 					</array>
 				</dict>
 			</array>
-			<key>found</key>
-			<array>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>. &lt;A HREF="/weather/local/</string>
-					<key>nameEnd</key>
-					<string>&lt;/A&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;</string>
-					<key>parseOrder</key>
-					<array>
-						<string>code</string>
-						<string>name</string>
-					</array>
-					<key>singleMatchString</key>
-					<string>Cities (1 of 1)</string>
-				</dict>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>&lt;/B&gt; &lt;A HREF="/weather/local/</string>
-					<key>nameEnd</key>
-					<string>&lt;/B&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;&lt;B&gt;</string>
-					<key>parseOrder</key>
-					<array>
-						<string>code</string>
-						<string>name</string>
-					</array>
-					<key>singleMatchString</key>
-					<string>Cities (1 of 1)</string>
-				</dict>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>. &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
-					<key>nameEnd</key>
-					<string>&lt;/A&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;</string>
-					<key>parseOrder</key>
-					<array>
-						<string>code</string>
-						<string>name</string>
-					</array>
-					<key>singleMatchString</key>
-					<string>Cities (1 of 1)</string>
-				</dict>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>&lt;/B&gt; &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
-					<key>nameEnd</key>
-					<string>&lt;/B&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;&lt;B&gt;</string>
-					<key>parseOrder</key>
-					<array>
-						<string>code</string>
-						<string>name</string>
-					</array>
-					<key>singleMatchString</key>
-					<string>Cities (1 of 1)</string>
-				</dict>
-				<dict>
-					<key>codeEnd</key>
-					<string>?</string>
-					<key>codeStart</key>
-					<string>&lt;/B&gt; &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
-					<key>nameEnd</key>
-					<string>&lt;/B&gt;</string>
-					<key>nameStart</key>
-					<string>search_city"&gt;&lt;B&gt;</string>
-					<key>parseOrder</key>
-					<array>
-						<string>code</string>
-						<string>name</string>
-					</array>
-					<key>singleMatchString</key>
-					<string>Traveling to:</string>
-				</dict>
-			</array>
-			<key>notFound</key>
+            <key>notFound</key>
 			<array>
 				<string>No items found. Please check your spelling or try another term.</string>
 				<string>Sorry, the page you requested was not found on weather.com.</string>
@@ -284,7 +213,7 @@
 			<key>sameAsSearchCityState</key>
 			<false/>
 			<key>searchURL</key>
-			<string>http://www.w3.weather.com/weather/local/%@</string>
+			<string>http://www.weather.com/weather/local/%@</string>
 		</dict>
 		<key>weather data</key>
 		<dict>

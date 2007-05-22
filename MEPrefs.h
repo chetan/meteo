@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+enum{kPeriodType,kNumberType,kStringType};
+
 @interface MEPrefs : NSObject 
 {
 	//Windows
@@ -97,6 +99,10 @@
 
 - (NSString *)checkNewVersion;
 - (NSString *)checkForNewServerErrors;
+- (NSComparisonResult)compareVersion:(NSString *)versionA toVersion:(NSString *)versionB;
+- (NSArray *)splitVersion:(NSString *)version;
+- (int)getCharType:(NSString *)character
+;
 
 
 - (void)updateInterfaceFromDefaults;

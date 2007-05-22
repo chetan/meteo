@@ -25,7 +25,7 @@
 - (void)dealloc
 {
 	[CURLHandle curlGoodbye];	// to clean up
-	[super dealloc];
+    [super dealloc];
 }
 
 + (MEWebFetcher *)sharedInstance
@@ -55,6 +55,7 @@
 */
 - (NSString *)fetchURLtoString:(NSURL *)url withTimeout:(int)secs
 {
+    NSLog(@"Fetching URL: %@",[url absoluteString]);
 	NSData *urlData     = [self fetchURLtoData:url withTimeout:secs];
 	NSString *urlString = [[[NSString alloc] initWithData:urlData encoding:NSASCIIStringEncoding] autorelease];
 	
@@ -90,14 +91,14 @@
 	[mURLHandle setUserAgent: @"Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.7.5)"];
 	[mURLHandle setConnectionTimeout:secs];
 	
-	data = [mURLHandle resourceData]; // already autoreleased?
+	data = [[mURLHandle resourceData] retain]; // already autoreleased?
 	if (NSURLHandleLoadFailed == [mURLHandle status])
 	{
 		NSLog([mURLHandle failureReason]);
 		return nil;
 	}
-	//return [data autorelease];
-	return data;
+	return [data autorelease];
+	//return data;
 }
 
 - (void)URLHandle:(NSURLHandle *)sender resourceDataDidBecomeAvailable:(NSData *)newBytes
@@ -166,7 +167,7 @@
 + (NSArray *)performSearchOnURL:(NSURL *)url usingParseDict:(NSDictionary *)searchDict
 											    withTimeout:(int)secs
 {
-	NSMutableArray  *citiesFound  = [NSMutableArray array]; // array to return - already autoreleased?
+	NSMutableArray  *citiesFound  = [[NSMutableArray array] retain]; // array to return - already autoreleased
 	NSString        *resultsPageContents;                   // text contents at url.
 	NSEnumerator	*itr;
 	NSRange			searchRange;
@@ -180,11 +181,11 @@
 	NSAssert(searchDict,@"searchDict was nil in performSearchOnURL.  Please restore your weather.xml file.");
 
 	resultsPageContents = [[MEWebFetcher sharedInstance] fetchURLtoString:url withTimeout:secs];
-	//NSLog(resultsPageContents);
+	
 	if (!resultsPageContents) {	
 		NSLog(@"Error downloading the page.");
 		//return [citiesFound autorelease];
-		return citiesFound;
+		return [citiesFound autorelease];
 	}
 	// Search page for text describing NOT FOUND
 	notFoundArray = [searchDict objectForKey:@"notFound"];
@@ -197,36 +198,35 @@
 		if (searchRange.location != NSNotFound)  {  
 			// NOT FOUND page
 			//return [citiesFound autorelease]; /* return an empty array for now */
-			return citiesFound;
+			return [citiesFound autorelease];
 		}
 	}
-//	//NSLog(@"Passes Not Found phase");
-//	// Search page for text describing FOUND
-//	foundArray = [searchDict objectForKey:@"found"];
-//	NSAssert(foundArray,@"There is an error in the weather.xml file (foundArray).  Please Reinstall Meteorologist.");
-//	itr = [foundArray objectEnumerator];
-//	while (foundDict = [itr nextObject])
-//	{	
-//		NSAssert([foundDict objectForKey:@"singleMatchString"],@"There is an error in the weather.xml file (foundDict missing key \"singleMatchString\").  Please Reinstall Meteorologist.");
-//		searchRange = [resultsPageContents rangeOfString:[foundDict objectForKey:@"singleMatchString"]];
-//
-//		if (searchRange.location != NSNotFound) 
-//		{   // found the singleMatchString
-//			// search for the single result.
-//			NSAssert([foundDict objectForKey:@"parseOrder"],@"There is an error in the weather.xml file (foundDict missing key \"parseOrder\").  Please Reinstall Meteorologist.");
-//			[MEWebParser parseSingleMatchFromString:resultsPageContents 
-//									  withParseDict:foundDict
-//									 withParseArray:[foundDict objectForKey:@"parseOrder"]
-//									  addingToArray:&citiesFound];
-//
-//
-//		}
-//	}
-//	if ([citiesFound count] > 0)
-//		//return [citiesFound autorelease];
-//		return citiesFound;
-//	//NSLog(@"Passes Single match phase");
-	
+
+	// Search page for text describing FOUND
+/*	foundArray = [searchDict objectForKey:@"found"];
+	NSAssert(foundArray,@"There is an error in the weather.xml file (foundArray).  Please Reinstall Meteorologist.");
+	itr = [foundArray objectEnumerator];
+	while (foundDict = [itr nextObject])
+	{	
+		NSAssert([foundDict objectForKey:@"singleMatchString"],@"There is an error in the weather.xml file (foundDict missing key \"singleMatchString\").  Please Reinstall Meteorologist.");
+		searchRange = [resultsPageContents rangeOfString:[foundDict objectForKey:@"singleMatchString"]];
+
+		if (searchRange.location != NSNotFound) 
+		{   // found the singleMatchString
+			// search for the single result.
+			NSAssert([foundDict objectForKey:@"parseOrder"],@"There is an error in the weather.xml file (foundDict missing key \"parseOrder\").  Please Reinstall Meteorologist.");
+			[MEWebParser parseSingleMatchFromString:resultsPageContents 
+									  withParseDict:foundDict
+									 withParseArray:[foundDict objectForKey:@"parseOrder"]
+									  addingToArray:&citiesFound];
+
+
+		}
+	}
+	if ([citiesFound count] > 0)
+		//return [citiesFound autorelease];
+		return citiesFound;
+*/	
 	// Search page for text describing MULTIPLE FOUND
 	choicesFoundArray = [searchDict objectForKey:@"choicesFound"];
 	if (choicesFoundArray) 
@@ -235,10 +235,10 @@
 		while (choicesDict = [itr nextObject]) 
 		{
 			NSAssert([choicesDict objectForKey:@"multipleMatchString"],@"There is an error in the weather.xml file (choicesDict missing key \"multipleMatchString\").  Please Reinstall Meteorologist.");
-			//searchRange = [resultsPageContents rangeOfString:[choicesDict objectForKey:@"multipleMatchString"]];
+			searchRange = [resultsPageContents rangeOfString:[choicesDict objectForKey:@"multipleMatchString"]];
 			
-			//if (searchRange.location != NSNotFound) 
-			//{   // found the multipleMatchString 
+			if (searchRange.location != NSNotFound) 
+			{   // found the multipleMatchString 
 				// search for the multiple results.
 				NSAssert([choicesDict objectForKey:@"parseOrder"],@"There is an error in the weather.xml file (choicesDict missing key \"parseOrder\").  Please Reinstall Meteorologist.");
 				[MEWebParser parseMultipleMatchesFromString:resultsPageContents
@@ -246,10 +246,10 @@
 											 withParseArray:[choicesDict objectForKey:@"parseOrder"]
 											  addingToArray:&citiesFound];
 				// and add them to citiesFound
-			//} // if
+			} // if
 		} // while
 //		return [citiesFound autorelease];
-		return citiesFound;
+		return [citiesFound autorelease];
 	} // if
 	else {
 		NSLog(@"No multiple choices found option");
@@ -293,7 +293,7 @@
 	NSAssert(foundDict,@"\"foundDict\" was nil in parseSingleMatchFromString.");
 	NSAssert(foundArray,@"\"foundArray\" was nil in parseSingleMatchFromString.");
 	
-	MEStringSearcher *ss = [[MEStringSearcher alloc] initWithString:string];
+	MEStringSearcher *ss = [[[MEStringSearcher alloc] initWithString:string] autorelease];
 	itr = [foundArray objectEnumerator];
 	
 	while (currKey = [itr nextObject]) {
@@ -305,13 +305,13 @@
 		}
 		else {
 			//NSLog(@"Missing Key: \"%@\" in [MEWebParser parseSingleMatchWithString...]",currKey);
-			[ss release];
+			//[ss release];
 			return;
 		}
 	}
 	
 	[*cities addObject:cityInfoDict];
-	[ss release];
+	//[ss release];
 }													  
 
 /* @parameters:
@@ -350,14 +350,13 @@
 		{
 			substring = [[ss getStringWithLeftBound:[foundDict objectForKey:[currKey stringByAppendingString:@"Start"]]
 										 rightBound:[foundDict objectForKey:[currKey stringByAppendingString:@"End"]]] retain];
-			if (substring)
-			{
+			if (substring) {
 				[cityInfoDict setObject:substring forKey:currKey];
-			} else
-			{
-				//NSLog(@"Missing Key: %@ in [MEWebParser parseMultipleMatchesWithString...]",currKey);
-				[ss release];
-				return; // should this be continue? is it maybe a bug?
+			} else {
+				NSLog(@"Missing Key: %@ in [MEWebParser parseMultipleMatchesWithString...]",currKey);
+				continue;
+                //[ss release];
+				//return; // should this be continue? is it maybe a bug?
 			}
 		} // while
 		[*cities addObject:cityInfoDict];

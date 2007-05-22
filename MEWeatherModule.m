@@ -236,24 +236,22 @@ BOOL validRange(NSRange range, int len)
     return [NSString stringWithFormat:@"%@ %@",d,t];
 }
 
+//
+// name-- optionally includes an extension.
+//
 NSImage *imageForName(NSString *name, BOOL inDock)
 {
-    NSString *primary = @"/Library/Application Support/Meteo/";
-    NSString *secondary = [@"~/Library/Application Support/Meteo/" stringByExpandingTildeInPath];
-    
-    NSString *base = nil;
-    
-    if([[NSFileManager defaultManager] fileExistsAtPath:primary])
-        base = primary;
-    else
-        base = secondary;
-	
-    if(!inDock)
-    {
-        return [[[NSImage alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@Menu Bar Icons/%@",base,name]] autorelease];
+    NSString *fileName;
+    if (!inDock) {
+        fileName = [[[NSBundle mainBundle] pathForImageResource:[NSString stringWithFormat:@"MB-%@",name]] retain];
+    } else {    
+        fileName = [[[NSBundle mainBundle] pathForResource:name ofType:@"tiff"] retain];
     }
-    else
-        return [[[NSImage alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@Dock Icons/Weather Status/%@",base,name]] autorelease];;
+    
+    NSImage *image = [[NSImage alloc] initWithContentsOfFile:fileName];
+    [fileName release];
+    
+    return [image autorelease];
 }
 
 
@@ -310,180 +308,109 @@ NSImage *imageForName(NSString *name, BOOL inDock)
 {
     NSImage *img = nil;
     
-    NSString *name = [[string lastPathComponent] stringByDeletingPathExtension];
+    NSString *name = [[[string lastPathComponent] stringByDeletingPathExtension] retain];
     int val = [name intValue];
+    [name release];
     
     NSString *imageName;
     
     if([key isEqualToString:@"Moon Phase"])
     {
-        img = [[[NSImage alloc] initWithContentsOfFile:@"/Library/Application Support/Meteo/Weather Status/Moon.tiff"] autorelease];
-        
-        if(!img)
-            [[[NSImage alloc] initWithContentsOfFile:[@"~/Library/Application Support/Meteo/Weather Status/Moon.tiff" stringByExpandingTildeInPath]] autorelease];
-        
-        if(img)
-            return img;
+        NSString *fileName = [[[NSBundle mainBundle] pathForImageResource:@"Moon"] retain];
+        img = [[NSImage alloc] initWithContentsOfFile:fileName];
     }
-    
-    switch(val)
-    {
-        case 1:
-            imageName = @"Rain.tiff";
-            break;
-        case 2:
-            imageName = @"Rain.tiff";
-            break;
-        case 3:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 4:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 5:
-            imageName = @"Rain.tiff";
-            break;
-        case 6:
-            imageName = @"Snow.tiff";
-            break;
-        case 7:
-            imageName = @"Sleet.tiff";
-            break;
-        case 8:
-            imageName = @"Rain.tiff";
-            break;
-        case 9:
-            imageName = @"Rain.tiff";
-            break;
-        case 10:
-            imageName = @"Rain.tiff";
-            break;
-        case 11:
-            imageName = @"Rain.tiff";
-            break;
-        case 12:
-            imageName = @"Rain.tiff";
-            break;
-        case 13:
-            imageName = @"Snow.tiff";
-            break;
-        case 14:
-            imageName = @"Snow.tiff";
-            break;
-        case 15:
-            imageName = @"Snow.tiff";
-            break;
-        case 16:
-            imageName = @"Snow.tiff";
-            break;
-        case 17:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 18:
-            imageName = @"Snow.tiff";
-            break;
-        case 19:
-            imageName = @"Hazy.tiff";
-            break;
-        case 20:
-            imageName = @"Hazy.tiff";
-            break;
-        case 21:
-            imageName = @"Hazy.tiff";
-            break;
-        case 22:
-            imageName = @"Hazy.tiff";
-            break;
-        case 23:
-            imageName = @"Wind.tiff";
-            break;
-        case 24:
-            imageName = @"Wind.tiff";
-            break;
-        case 25:
-            imageName = @"Wind.tiff";
-            break;
-        case 26:
-            imageName = @"Cloudy.tiff";
-            break;
-        case 27:
-            imageName = @"Moon-Cloud-2.tiff";
-            break;
-        case 28:
-            imageName = @"Sun-Cloud-2.tiff";
-            break;
-        case 29:
-            imageName = @"Moon-Cloud-1.tiff";
-            break;
-        case 30:
-            imageName = @"Sun-Cloud-1.tiff";
-            break;
-        case 31:
-            imageName = @"Moon.tiff";
-            break;
-        case 32:
-            imageName = @"Sun.tiff";
-            break;
-        case 33:
-            imageName = @"Moon-Cloud-1.tiff";
-            break;
-        case 34:
-            imageName = @"Sun-Cloud-1.tiff";
-            break;
-        case 35:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 36:
-            imageName = @"Sun.tiff";
-            break;
-        case 37:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 38:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        case 39:
-            imageName = @"Rain.tiff";
-            break;
-        case 40:
-            imageName = @"Rain.tiff";
-            break;
-        case 41:
-            imageName = @"Snow.tiff";
-            break;
-        case 42:
-            imageName = @"Snow.tiff";
-            break;
-        case 43:
-            imageName = @"Snow.tiff";
-            break;
-        case 44:
-            imageName = @"Sun-Cloud-1.tiff";
-            break;
-        case 45:
-            imageName = @"Rain.tiff";
-            break;
-        case 46:
-            imageName = @"Snow.tiff";
-            break;
-        case 47:
-            imageName = @"Thunderstorm.tiff";
-            break;
-        default:
-            imageName = @"Unknown.tiff";
-            break;
-    }
+    else {
+        switch(val)
+        {
+            case 1:
+            case 2:
+            case 5:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 39:
+            case 40:
+            case 45:
+                imageName = @"Rain";
+                break;
+            case 3:
+            case 4:
+            case 17:
+            case 35:
+            case 37:
+            case 38:
+            case 47:
+                imageName = @"Thunderstorm";
+                break;
+            case 6:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 18:
+            case 41:
+            case 42:
+            case 43:
+            case 46:
+                imageName = @"Snow";
+                break;
+            case 7:
+                imageName = @"Sleet";
+                break;
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+                imageName = @"Hazy";
+                break;
+            case 23:
+            case 24:
+            case 25:
+                imageName = @"Wind";
+                break;
+            case 26:
+                imageName = @"Cloudy";
+                break;
+            case 27:
+                imageName = @"Moon-Cloud-2";
+                break;
+            case 28:
+                imageName = @"Sun-Cloud-2";
+                break;
+            case 29:
+            case 33:
+                imageName = @"Moon-Cloud-1";
+                break;
+            case 30:
+            case 34:
+            case 44:
+                imageName = @"Sun-Cloud-1";
+                break;
+            case 31:
+                imageName = @"Moon";
+                break;
+            case 32:
+            case 36:
+                imageName = @"Sun";
+                break;
+            default:
+                imageName = @"Unknown";
+                break;
+        }
 	
-    if(string && !(img = imageForName(imageName,dock)))
-    {
-        if(dock)
-            return nil;
-		
-		NSData *dat = [[NSURL URLWithString:string] resourceDataUsingCache:YES];
-        if(dat)
-            img = [[[NSImage alloc] initWithData:dat] autorelease];
+        img = imageForName(imageName,dock);
+        /*if(string && !(img = imageForName(imageName,dock)))
+        {
+            if(dock)
+                return nil;
+            
+            NSData *dat = [[NSURL URLWithString:string] resourceDataUsingCache:YES];
+            if(dat)
+                img = [[[NSImage alloc] initWithData:dat] autorelease];
+        }*/
     }
-    
     return img;
 }
 
@@ -518,10 +445,10 @@ NSImage *imageForName(NSString *name, BOOL inDock)
     Class class = [self class];
 	
 	if (debug)														//JRC
-		NSLog(@"Weather.com URL: http://www.w3.weather.com/weather/local/%@", code);
+		NSLog(@"Weather.com URL: http://www.weather.com/weather/local/%@", code);
 									  //JRC
     url = [NSURL URLWithString:(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL,
-																				  (CFStringRef)[NSString stringWithFormat:@"http://www.w3.weather.com/weather/local/%@",code],NULL,NULL,kCFStringEncodingUTF8)];
+																				  (CFStringRef)[NSString stringWithFormat:@"http://www.weather.com/weather/local/%@",code],NULL,NULL,kCFStringEncodingUTF8)];
 	
 	if(!url)
 	{
@@ -1077,115 +1004,111 @@ else
 {
     NSImage *img = nil;
     
-    NSString *name = [[string lastPathComponent] stringByDeletingPathExtension];
+    NSString *name = [[[string lastPathComponent] stringByDeletingPathExtension] retain];
     
-    NSString *imageName = @"";
+    NSString *imageName;
     
     if([key isEqualToString:@"Moon Phase"])
     {
-        name = [MEWeatherModule stripPrefix:@"moon" forString:name];
+        NSString *s = [[MEWeatherModule stripPrefix:@"moon" forString:name] retain];
+        NSString *imageFileName = [[[NSBundle mainBundle] pathForImageResource:[NSString stringWithFormat:@"MoonPhase-%@",s]] retain];
+        [s release];
+        if (imageFileName == nil) {
+            imageFileName = [[[NSBundle mainBundle] pathForImageResource:@"Moon"] retain];
+        }
         
-        img = [[[NSImage alloc] initWithContentsOfFile:[NSString stringWithFormat:@"/Library/Application Support/Meteo/Moon Phase/MoonPhase-%@.tiff",name]] autorelease];
+        img = [[NSImage alloc] initWithContentsOfFile:imageFileName];
+        [imageFileName release];
+    }
+    else {
+        if([name hasSuffix:@"chanceflurries"])
+            imageName = @"Flurries.tiff";
+        else if([name hasSuffix:@"chancerain"])
+            imageName = @"Rain.tiff";
+        else if([name hasSuffix:@"chancesleat"])
+            imageName = @"Sleet.tiff";
+        else if([name hasSuffix:@"chancesnow"])
+            imageName = @"Snow.tiff";
+        else if([name hasSuffix:@"chancetstorms"])
+            imageName = @"Thunderstorm.tiff";
+        else if([name hasSuffix:@"clear"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon.tiff";
+            else
+                imageName = @"Sun.tiff";
+        }
+        else if([name hasSuffix:@"cloudy"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Cloudy.tiff";
+            else
+                imageName = @"Cloudy.tiff";
+        }
+        else if([name hasSuffix:@"flurries"])
+            imageName = @"Flurries.tiff";
+        else if([name hasSuffix:@"hazy"])
+            imageName = @"Hazy.tiff";
+        else if([name hasSuffix:@"mostlycloudy"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon-Cloud-2.tiff";
+            else
+                imageName = @"Sun-Cloud-2.tiff";
+        }
+        else if([name hasSuffix:@"mostlysunny"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon-Cloud-1.tiff";
+            else
+                imageName = @"Sun-Cloud-1.tiff";
+        }
+        else if([name hasSuffix:@"partlycloudy"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon-Cloud-1.tiff";
+            else
+                imageName = @"Sun-Cloud-1.tiff";
+        }
+        else if([name hasSuffix:@"partlysunny"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon-Cloud-2.tiff";
+            else
+                imageName = @"Sun-Cloud-2.tiff";
+        }
+        else if([name hasSuffix:@"rain"])
+            imageName = @"Rain.tiff";
+        else if([name hasSuffix:@"sleat"])
+            imageName = @"Sleet.tiff";
+        else if([name hasSuffix:@"snow"])
+            imageName = @"Snow.tiff";
+        else if([name hasSuffix:@"sunny"])
+        {
+            if([name hasPrefix:@"nt"])
+                imageName = @"Moon.tiff";
+            else
+                imageName = @"Sun.tiff";
+        }
+        else if([name hasSuffix:@"tstorms"])
+            imageName = @"Thunderstorm.tiff";
+        else if([name hasSuffix:@"unknown"])
+            imageName = @"Unknown.tiff";
+        else
+            imageName = @"Unknown.tiff";
         
-        if(!img)
-            [[[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Meteo/Moon Phase/MoonPhase-%@.tiff",name] stringByExpandingTildeInPath]] autorelease];
-        
-        if(!img)
-            img = [[[NSImage alloc] initWithContentsOfFile:@"/Library/Application Support/Meteo/Weather Status/Moon.tiff"] autorelease];
-		
-        if(!img)
-            [[[NSImage alloc] initWithContentsOfFile:[@"~/Library/Application Support/Meteo/Weather Status/Moon.tiff" stringByExpandingTildeInPath]] autorelease];
-        
-        if(img)
-            return img;
+        img = imageForName(imageName,dock);
+        /*if(string && !(img = imageForName(imageName,dock)))
+        {
+            if(dock)
+                return nil;
+            
+            NSData *dat = [[NSURL URLWithString:string] resourceDataUsingCache:YES];
+            if(dat)
+                img = [[[NSImage alloc] initWithData:dat] autorelease];
+        }*/
     }
-    
-    if([name hasSuffix:@"chanceflurries"])
-        imageName = @"Flurries.tiff";
-    else if([name hasSuffix:@"chancerain"])
-        imageName = @"Rain.tiff";
-    else if([name hasSuffix:@"chancesleat"])
-        imageName = @"Sleet.tiff";
-    else if([name hasSuffix:@"chancesnow"])
-        imageName = @"Snow.tiff";
-    else if([name hasSuffix:@"chancetstorms"])
-        imageName = @"Thunderstorm.tiff";
-    else if([name hasSuffix:@"clear"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon.tiff";
-        else
-            imageName = @"Sun.tiff";
-    }
-    else if([name hasSuffix:@"cloudy"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Cloudy.tiff";
-        else
-            imageName = @"Cloudy.tiff";
-    }
-    else if([name hasSuffix:@"flurries"])
-        imageName = @"Flurries.tiff";
-    else if([name hasSuffix:@"hazy"])
-        imageName = @"Hazy.tiff";
-    else if([name hasSuffix:@"mostlycloudy"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon-Cloud-2.tiff";
-        else
-            imageName = @"Sun-Cloud-2.tiff";
-    }
-    else if([name hasSuffix:@"mostlysunny"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon-Cloud-1.tiff";
-        else
-            imageName = @"Sun-Cloud-1.tiff";
-    }
-    else if([name hasSuffix:@"partlycloudy"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon-Cloud-1.tiff";
-        else
-            imageName = @"Sun-Cloud-1.tiff";
-    }
-    else if([name hasSuffix:@"partlysunny"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon-Cloud-2.tiff";
-        else
-            imageName = @"Sun-Cloud-2.tiff";
-    }
-    else if([name hasSuffix:@"rain"])
-        imageName = @"Rain.tiff";
-    else if([name hasSuffix:@"sleat"])
-        imageName = @"Sleet.tiff";
-    else if([name hasSuffix:@"snow"])
-        imageName = @"Snow.tiff";
-    else if([name hasSuffix:@"sunny"])
-    {
-        if([name hasPrefix:@"nt"])
-            imageName = @"Moon.tiff";
-        else
-            imageName = @"Sun.tiff";
-    }
-    else if([name hasSuffix:@"tstorms"])
-        imageName = @"Thunderstorm.tiff";
-    else if([name hasSuffix:@"unknown"])
-        imageName = @"Unknown.tiff";
-    else
-        imageName = @"Unknown.tiff";
-    
-    if(string && !(img = imageForName(imageName,dock)))
-    {
-        if(dock)
-            return nil;
-		
-		NSData *dat = [[NSURL URLWithString:string] resourceDataUsingCache:YES];
-        if(dat)
-            img = [[[NSImage alloc] initWithData:dat] autorelease];
-    }
-    
+    [name release];
     return img;
 }
 

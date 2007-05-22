@@ -281,180 +281,68 @@
 
 - (void)updateLocalImages
 {
-    BOOL needRequest = YES;
-    NSArray *imageArray = [NSArray arrayWithObjects:@"Menu Bar Icons/Flurries.tiff",
-                                                    @"Menu Bar Icons/Hazy.tiff",
-                                                    @"Menu Bar Icons/Alert.tiff",
-                                                    @"Menu Bar Icons/Cloudy.tiff",
-                                                    @"Menu Bar Icons/Moon.tiff",
-                                                    @"Menu Bar Icons/Moon-Cloud-1.tiff",
-                                                    @"Menu Bar Icons/Moon-Cloud-2.tiff",
-                                                    @"Menu Bar Icons/Moon.tiff",
-                                                    @"Menu Bar Icons/Rain.tiff",
-                                                    @"Menu Bar Icons/Sleet.tiff",
-                                                    @"Menu Bar Icons/Snow.tiff",
-                                                    @"Menu Bar Icons/Sun-Cloud-1.tiff",
-                                                    @"Menu Bar Icons/Sun-Cloud-2.tiff",
-                                                    @"Menu Bar Icons/Sun.tiff",
-                                                    @"Menu Bar Icons/Thunderstorm.tiff",
-                                                    @"Menu Bar Icons/Unknown.tiff",
-                                                    @"Menu Bar Icons/Cloudy.tiff",
-                                                    @"Menu Bar Icons/Wind.tiff",
-                                                    @"Menu Bar Icons/Loading-1.tiff",
-                                                    @"Menu Bar Icons/Loading-2.tiff",
-                                                    @"Menu Bar Icons/Loading-3.tiff",
-                                                    @"Menu Bar Icons/Loading-4.tiff",
-                                                    @"Menu Bar Icons/Loading-5.tiff",
-                                                    @"Menu Bar Icons/Loading-6.tiff",
-                                                    @"Menu Bar Icons/Loading-7.tiff",
-                                                    @"Menu Bar Icons/Loading-8.tiff",
-                                                    @"Menu Bar Icons/Unavailable.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-1.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-2.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-3.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-4.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-5.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-6.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-7.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-8.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-9.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-10.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-11.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-12.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-13.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-14.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-15.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-16.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-17.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-18.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-19.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-20.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-21.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-22.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-23.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-24.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-25.tiff",
-                                                    @"Dock Icons/Moon Phase/MoonPhase-26.tiff",
-                                                    @"Dock Icons/Television/Television-Day-Screen.tiff",
-                                                    @"Dock Icons/Television/Television-Day.tiff",
-                                                    @"Dock Icons/Television/Television-Night-Screen.tiff",
-                                                    @"Dock Icons/Television/Television-Night.tiff",
-                                                    @"Dock Icons/Television/Television.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-1.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-2.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-3.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-4.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-5.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-6.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-7.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-8.tiff",
-                                                    @"Dock Icons/Temperature/Temperature-9.tiff",
-                                                    @"Dock Icons/Weather Status/Moon-Cloud-1.tiff",
-                                                    @"Dock Icons/Weather Status/Moon-Cloud-2.tiff",
-                                                    @"Dock Icons/Weather Status/Sun-Cloud-1.tiff",
-                                                    @"Dock Icons/Weather Status/Sun-Cloud-2.tiff",
-                                                    @"Dock Icons/Weather Status/Cloudy.tiff",
-                                                    @"Dock Icons/Weather Status/Alert.tiff",
-                                                    @"Dock Icons/Weather Status/Sun.tiff",
-                                                    @"Dock Icons/Weather Status/Hazy.tiff",
-                                                    @"Dock Icons/Weather Status/Moon.tiff",
-                                                    @"Dock Icons/Weather Status/Rain.tiff",
-                                                    @"Dock Icons/Weather Status/Snow.tiff",
-                                                    @"Dock Icons/Weather Status/Flurries.tiff",
-                                                    @"Dock Icons/Weather Status/Sleet.tiff",
-                                                    @"Dock Icons/Weather Status/Thunderstorm.tiff",
-                                                    @"Dock Icons/Weather Status/Unknown.tiff",
-                                                    @"Dock Icons/Weather Status/Wind.tiff",
-                                                    nil];
+    NSArray *imageArray = [NSArray arrayWithObjects:@"MB-Flurries.tiff",
+                @"MB-Hazy.tiff",@"MB-Alert.tiff",@"MB-Cloudy.tiff",
+                @"MB-Moon.tiff",@"MB-Moon-Cloud-1.tiff",@"MB-Moon-Cloud-2.tiff",
+                @"MB-Moon.tiff",@"MB-Rain.tiff",@"MB-Sleet.tiff",
+                @"MB-Snow.tiff",@"MB-Sun-Cloud-1.tiff",@"MB-Sun-Cloud-2.tiff",
+                @"MB-Sun.tiff",@"MB-Thunderstorm.tiff",@"MB-Unknown.tiff",
+                @"MB-Cloudy.tiff",@"MB-Wind.tiff",@"MB-Unavailable.tiff",
                                                     
-    NSEnumerator *imageEnum = [imageArray objectEnumerator];
-    NSString *next;
-    
-    NSString *base = @"http://heat-meteo.sourceforge.net/images/icons/";
-    NSString *local = @"/Library/Application Support/Meteo/";
+                @"Loading-1.tiff",@"Loading-2.tiff",@"Loading-3.tiff",
+                @"Loading-4.tiff",@"Loading-5.tiff",@"Loading-6.tiff",
+                @"Loading-7.tiff",@"Loading-8.tiff",
+                                                    
+                @"MoonPhase-1.tiff",@"MoonPhase-2.tiff",@"MoonPhase-3.tiff",
+                @"MoonPhase-4.tiff",@"MoonPhase-5.tiff",@"MoonPhase-6.tiff",
+                @"MoonPhase-7.tiff",@"MoonPhase-8.tiff",@"MoonPhase-9.tiff",
+                @"MoonPhase-10.tiff",@"MoonPhase-11.tiff",@"MoonPhase-12.tiff",
+                @"MoonPhase-13.tiff",@"MoonPhase-14.tiff",@"MoonPhase-15.tiff",
+                @"MoonPhase-16.tiff",@"MoonPhase-17.tiff",@"MoonPhase-18.tiff",
+                @"MoonPhase-19.tiff",@"MoonPhase-20.tiff",@"MoonPhase-21.tiff",
+                @"MoonPhase-22.tiff",@"MoonPhase-23.tiff",@"MoonPhase-24.tiff",
+                @"MoonPhase-25.tiff",@"MoonPhase-26.tiff",
+                
+                @"Television-Day-Screen.tiff",@"Television-Day.tiff",
+                @"Television-Night-Screen.tiff",@"Television-Night.tiff",
+                @"Television.tiff",
+                
+                @"Temperature-1.tiff",@"Temperature-2.tiff",
+                @"Temperature-3.tiff",@"Temperature-4.tiff",
+                @"Temperature-5.tiff",@"Temperature-6.tiff",
+                @"Temperature-7.tiff",@"Temperature-8.tiff",
+                @"Temperature-9.tiff",
+                                                    
+                @"Moon-Cloud-1.tiff",@"Moon-Cloud-2.tiff",@"Sun-Cloud-1.tiff",
+                @"Sun-Cloud-2.tiff",
+                
+                @"Cloudy.tiff",@"Alert.tiff",@"Sun.tiff",@"Hazy.tiff",
+                @"Moon.tiff",@"Rain.tiff",@"Snow.tiff",@"Flurries.tiff",
+                @"Sleet.tiff",@"Thunderstorm.tiff",@"Unknown.tiff",@"Wind.tiff",
+                
+                nil];
+                                                    
+    NSString *local = [[NSBundle mainBundle] resourcePath];
     
     NSFileManager *man = [NSFileManager defaultManager];
-    [man createDirectoryAtPath:local attributes:nil];
+    NSEnumerator  *imageEnum = [imageArray objectEnumerator];
+    NSString      *next;
     
-    if(![man fileExistsAtPath:local])
-    {
-        local = [@"~/Library/Application Support/Meteo/" stringByExpandingTildeInPath];
-        [man createDirectoryAtPath:local attributes:nil];
-    }
+    BOOL foundAll = YES;
     
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Menu Bar Icons",local] attributes:nil];
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Dock Icons",local] attributes:nil];
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Dock Icons/Moon Phase",local] attributes:nil];
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Dock Icons/Television",local] attributes:nil];
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Dock Icons/Temperature",local] attributes:nil];
-    [man createDirectoryAtPath:[NSString stringWithFormat:@"%@Dock Icons/Weather Status",local] attributes:nil];
-    
-    BOOL runAgain = NO;
-    
-    while(next = [imageEnum nextObject])
-    {
-        if(![man fileExistsAtPath:[NSString stringWithFormat:@"%@%@",local,next]])
-        {
-            if(needRequest)
-            {
-                [NSApp activateIgnoringOtherApps:YES];
-            
-                int res = NSRunAlertPanel(@"You're missing some local icons!",@"The icons for Meteorologist are no longer stored inside of Meteo - now they reside in /Library/Application Support/Meteo.  Would you like Meteo to go and fetch these icons now off my server?",@"Yes",@"Later",nil);
-                
-                if(!res)
-                    return;
-                else
-                {
-                    [downloadWindowProgress setUsesThreadedAnimation:YES];
-                    [downloadWindowProgress setDoubleValue:0];
-                    [downloadWindow center];
-                    [downloadWindow makeKeyAndOrderFront:nil];
-                    needRequest = NO;
-                }
-            }
-            
-            NSString *imgStr = [NSString stringWithFormat:@"%@%@",base,next];
-            imgStr = [[imgStr componentsSeparatedByString:@" "] componentsJoinedByString:@"%20"];
-            NSData *dat = [[NSURL URLWithString:imgStr] resourceDataUsingCache:YES];
-            
-            if(dat)
-            {
-                [downloadWindowName setStringValue:
-                                        [NSString stringWithFormat:@"Image Name: %@",[next lastPathComponent]]];
-                [downloadWindowName display];
-                
-                [downloadWindowSize setStringValue:
-                                        [NSString stringWithFormat:@"Image Size: %d (bytes)",[dat length]]];
-                [downloadWindowSize display];
-            
-                [downloadWindowImage setImage:[[[NSImage alloc] initWithData:dat] autorelease]];
-                [downloadWindowImage display];
-                
-                if(![dat writeToFile:[NSString stringWithFormat:@"%@%@",local,next] atomically:NO])
-                    dat = nil;
-            }
-            
-            if(!dat)
-            {
-                //error message
-                runAgain = NSRunAlertPanel(@"Download Error!",[NSString stringWithFormat:@"There seems to be a problem downloading %@.  Make sure that your internet connection is active and that the folder /Library/Application Support/Meteo is writable.  Would you like to try downloading again?",next],@"Yes",@"Later",nil);
-                
-                break;
-            }
+    while(next = [imageEnum nextObject]) {
+        if(![man fileExistsAtPath:[NSString stringWithFormat:@"%@/%@",local,next]]) {
+            foundAll = NO;
+            NSLog(@"Missing image: %@/%@",local,next);
+            //break;
         }
-        
-        [downloadWindowProgress incrementBy:100.0/[imageArray count]];
-        [downloadWindowProgress display];
     }
-    
-    [downloadWindowProgress setDoubleValue:100.0];
-    [NSThread sleepUntilDate:[[NSDate date] addTimeInterval:2.0]];
-    [downloadWindow orderOut:nil];
-    
-    if(runAgain)
-    {
-        [NSThread sleepUntilDate:[[NSDate date] addTimeInterval:1.0]];
-        [self updateLocalImages];
+    if (foundAll) {
+        NSLog(@"All images found inside of the Meteorologist resources folder");
+    }
+    else {
+        NSRunAlertPanel(@"Missing Icons",@"Meteorologist is missing some icons.  Please download Meteorologist again.",nil,nil,nil);
+        //NSAlert(@"Meteorologist is missing some icons.  Please download");
     }
 }
 
@@ -1741,19 +1629,14 @@ NSFont* fontWithMaxHeight(NSString *name, int maxHeight)
 {
     NSNumber *num = [menuBarLoadTimer userInfo];
     NSImage *img = nil;
-    NSString *loc = [NSString stringWithFormat:@"/Library/Application Support/Meteo/Menu Bar Icons/Loading-%d.tiff",[num intValue]];
+    NSString *imageName = [NSString stringWithFormat:@"Loading-%d",[num intValue]];
+    NSString *imageFileName = [[NSBundle mainBundle] pathForResource:imageName ofType:@"tiff"];
     
-    img = [[[NSImage alloc] initWithContentsOfFile:loc] autorelease];
-        
-    if(!img)
-        [[[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/%@",loc] stringByExpandingTildeInPath]] autorelease];
+    img = [[[NSImage alloc] initWithContentsOfFile:imageFileName] autorelease];
         
     [statusItem setImage:img];
     
-    if([num intValue] == 8)
-        num = [NSNumber numberWithInt:1];
-    else
-        num = [NSNumber numberWithInt:[num intValue]+1];
+    num = [NSNumber numberWithInt:([num intValue]+1)%9];
     
     menuBarLoadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadNextInMenuBar) userInfo:num repeats:NO];
 }

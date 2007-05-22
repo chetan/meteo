@@ -170,8 +170,8 @@ MEWeatherModuleParser *sharedWeatherModuleParser = nil;
 	if ([searchTerm hasPrefix:@"www."])
 		searchTerm = [NSMutableString stringWithFormat:@"http://%@",searchTerm];
 	isAURL = [searchTerm hasPrefix:@"http://"];
-	if (isAURL)
-		searchTerm = [NSMutableString stringWithFormat:@"http://www.w3.%@",[searchTerm stripPrefix:@"http://www."]];
+//	if (isAURL)
+//		searchTerm = [NSMutableString stringWithFormat:@"http://www.w3.%@",[searchTerm stripPrefix:@"http://www."]];
 		
 	// figure out if we're searching for a city,state, a zip code, or a URL
 	if (isAURL)
