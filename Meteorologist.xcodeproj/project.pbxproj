@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		510939BF0BFFCBB000202293 /* weather.xml in Resources */ = {isa = PBXBuildFile; fileRef = 510939BE0BFFCBB000202293 /* weather.xml */; };
-		514F3E130A4E078900378165 /* CURLHandle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514F3E000A4E071C00378165 /* CURLHandle.framework */; };
+		51093BAC0C06847600202293 /* CURLHandle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51093BAB0C06847600202293 /* CURLHandle.framework */; };
 		514F3E1D0A4E0A4B00378165 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		514F3E1F0A4E0A5D00378165 /* Meteo-Logo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BE3F8770425778A001ED9CA /* Meteo-Logo.tiff */; };
 		514F3E200A4E0A5D00378165 /* meteo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8B47F0400410469E00809258 /* meteo.icns */; };
@@ -25,7 +25,6 @@
 		514F3E2B0A4E0A7C00378165 /* MEWeatherModuleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F8CB3047B1A3D0050035E /* MEWeatherModuleParser.m */; };
 		514F3E2C0A4E0A7C00378165 /* MEWebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD04EE0682333800C876F0 /* MEWebUtils.m */; };
 		514F3E750A4E0ECA00378165 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		514F3E760A4E0ECD00378165 /* CURLHandle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514F3E000A4E071C00378165 /* CURLHandle.framework */; };
 		514F3EDE0A4E281C00378165 /* Message.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4B4ECE0422F083009A2FD0 /* Message.framework */; };
 		514F3EDF0A4E288800378165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		51D7CFCC0B13D79C006F376D /* MoonPhase-1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 51D7CF770B13D79C006F376D /* MoonPhase-1.tiff */; };
@@ -111,23 +110,6 @@
 		51D7D1250B13E048006F376D /* MB-Flurries.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 51D7D1140B13E048006F376D /* MB-Flurries.tiff */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		514F3E190A4E07D300378165 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 514F3E150A4E07D300378165 /* CURLHandle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 514F3BC50A4DC62A00378165;
-			remoteInfo = CURLHandle;
-		};
-		514F3E1B0A4E095900378165 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 514F3E150A4E07D300378165 /* CURLHandle.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 514F3BC40A4DC62A00378165;
-			remoteInfo = CURLHandle;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		514F3E110A4E077500378165 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -135,7 +117,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				514F3E130A4E078900378165 /* CURLHandle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,12 +140,11 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Meteorologist_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteorologist_Prefix.h; sourceTree = "<group>"; };
 		510939BE0BFFCBB000202293 /* weather.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = weather.xml; sourceTree = "<group>"; };
+		51093BAB0C06847600202293 /* CURLHandle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CURLHandle.framework; path = frameworks/CURLHandle.framework; sourceTree = "<group>"; };
 		5127356707BC713E00ED0B3D /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		5127356B07BC717700ED0B3D /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		514F3E000A4E071C00378165 /* CURLHandle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CURLHandle.framework; path = ../CURLHandle/CURLHandleSource/build/CURLHandle.framework; sourceTree = SOURCE_ROOT; };
 		514F3E080A4E075B00378165 /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteorologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F3E0A0A4E075B00378165 /* Meteorologist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Meteorologist-Info.plist"; sourceTree = "<group>"; };
-		514F3E150A4E07D300378165 /* CURLHandle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CURLHandle.xcodeproj; path = ../CURLHandle/CURLHandleSource/CURLHandle.xcodeproj; sourceTree = SOURCE_ROOT; };
 		5179D43E0897528900C4AE2D /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5179D43F0897529C00C4AE2D /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5179D440089752B500C4AE2D /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
@@ -288,8 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				514F3EDE0A4E281C00378165 /* Message.framework in Frameworks */,
-				514F3E760A4E0ECD00378165 /* CURLHandle.framework in Frameworks */,
 				514F3E750A4E0ECA00378165 /* Cocoa.framework in Frameworks */,
+				51093BAC0C06847600202293 /* CURLHandle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +308,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				514F3E000A4E071C00378165 /* CURLHandle.framework */,
+				51093BAB0C06847600202293 /* CURLHandle.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				8B4B4ECE0422F083009A2FD0 /* Message.framework */,
@@ -355,7 +335,6 @@
 		29B97314FDCFA39411CA2CEA /* Meteorologist */ = {
 			isa = PBXGroup;
 			children = (
-				514F3E150A4E07D300378165 /* CURLHandle.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -402,14 +381,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		514F3E160A4E07D300378165 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				514F3E1A0A4E07D300378165 /* CURLHandle.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		51D7CF740B13D79C006F376D /* images */ = {
@@ -564,7 +535,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				514F3E1C0A4E095900378165 /* PBXTargetDependency */,
 			);
 			name = Meteorologist;
 			productName = "Meteorologist Universal";
@@ -580,27 +550,11 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Meteorologist */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 514F3E160A4E07D300378165 /* Products */;
-					ProjectRef = 514F3E150A4E07D300378165 /* CURLHandle.xcodeproj */;
-				},
-			);
 			targets = (
 				514F3E070A4E075B00378165 /* Meteorologist */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		514F3E1A0A4E07D300378165 /* CURLHandle.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CURLHandle.framework;
-			remoteRef = 514F3E190A4E07D300378165 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		514F3E040A4E075B00378165 /* Resources */ = {
@@ -720,14 +674,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		514F3E1C0A4E095900378165 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CURLHandle;
-			targetProxy = 514F3E1B0A4E095900378165 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -812,8 +758,10 @@
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/../CURLHandle/CURLHandleSource/build/",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../AGRegex/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -837,8 +785,10 @@
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/../CURLHandle/CURLHandleSource/build/",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../AGRegex/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -866,8 +816,10 @@
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/../CURLHandle/CURLHandleSource/build/",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../AGRegex/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
