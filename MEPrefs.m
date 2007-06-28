@@ -466,7 +466,7 @@
 //;
 }
 
-- (IBAction)chooseAlertSong:(id)sender
+/*- (IBAction)chooseAlertSong:(id)sender
 {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     [panel setTitle:@"Select a music file"];
@@ -482,7 +482,7 @@
         [alertSong setStringValue:filename];
         [self outletAction:sender];
     }
-}
+}*/
 
 - (void)updateInterfaceFromDefaults
 {
@@ -620,12 +620,12 @@
     
     [defaults setObject:NUM([embedControls state]) forKey:@"embedControls"];
     
-    [defaults setObject:[alertEmail stringValue] forKey:@"alertEmail"];
-    [defaults setObject:[alertSong stringValue] forKey:@"alertSong"];
-    [defaults setObject:[NSNumber numberWithInt:[[alertOptions cellAtRow:0 column:0] state]*1 +
-                                                [[alertOptions cellAtRow:1 column:0] state]*2 +
-                                                [[alertOptions cellAtRow:2 column:0] state]*4 +
-                                                [[alertOptions cellAtRow:3 column:0] state]*8] forKey:@"alertOptions"];
+//    [defaults setObject:[alertEmail stringValue] forKey:@"alertEmail"];
+//    [defaults setObject:[alertSong stringValue] forKey:@"alertSong"];
+//    [defaults setObject:[NSNumber numberWithInt:[[alertOptions cellAtRow:0 column:0] state]*1 +
+//                                                [[alertOptions cellAtRow:1 column:0] state]*2 +
+//                                                [[alertOptions cellAtRow:2 column:0] state]*4 +
+//                                                [[alertOptions cellAtRow:3 column:0] state]*8] forKey:@"alertOptions"];
     
     [defaults setObject:[NSNumber numberWithBool:[killOtherMeteo state]] forKey:@"killOtherMeteo"];
     

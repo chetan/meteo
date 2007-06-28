@@ -351,8 +351,8 @@
 
 + (NSArray *)moduleClasses
 {
-    return [NSArray arrayWithObjects:[MEWundergroundCom class],
-                                      [MENWSCom class],
+    return [NSArray arrayWithObjects://[MEWundergroundCom class],
+                                      //[MENWSCom class],
                                       [MEWeatherCom class],
                                       nil]; 
 }

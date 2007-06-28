@@ -274,11 +274,11 @@ NSImage *imageForName(NSString *name, BOOL inDock)
 		@"Feels Like",
 		@"Dew Point",
 		@"Humidity",
-		@"Visibility",
+		//@"Visibility",
 		@"Pressure",
-		@"Precipitation",
+		//@"Precipitation",
 		@"Wind",
-		@"UV Index",
+		//@"UV Index",
 		@"Last Update",
 		@"Hi",
 		@"Low",
@@ -295,7 +295,7 @@ NSImage *imageForName(NSString *name, BOOL inDock)
 		@"Forecast - Humidity",
 		@"Forecast - Precipitation",
 		@"Radar Image",
-		@"Weather Alert",
+		//@"Weather Alert",
 		nil];
 }
 
@@ -957,7 +957,8 @@ else
 
 + (NSArray *)supportedKeys
 {
-    return [NSArray arrayWithObjects:@"Weather Image",
+    return [NSArray arrayWithObjects:nil];
+    /*return [NSArray arrayWithObjects:@"Weather Image",
 		@"Weather Link",
 		@"Wind",
 		@"Humidity",
@@ -992,7 +993,7 @@ else
 		@"Radar Image",
 		@"Moon Phase",
 		@"Weather Alert",
-		nil];
+		nil];*/
 }
 
 + (NSArray *)supportedInfos

@@ -47,6 +47,7 @@
     IBOutlet NSTextField *downloadWindowSize;
     IBOutlet NSImageView *downloadWindowImage;
     
+    IBOutlet NSTextField *versionTF;
     
     NSTimer *menuBarLoadTimer;
 	

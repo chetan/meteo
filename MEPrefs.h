@@ -62,9 +62,9 @@ enum{kPeriodType,kNumberType,kStringType};
     IBOutlet NSPopUpButton *degreeUnits, *distanceUnits, *speedUnits, *pressureUnits;
 
     //Weather Alerts
-    IBOutlet NSMatrix *alertOptions;
-    IBOutlet NSTextField *alertEmail;
-    IBOutlet NSTextField *alertSong;
+    //IBOutlet NSMatrix *alertOptions;
+    //IBOutlet NSTextField *alertEmail;
+    //IBOutlet NSTextField *alertSong;
     
     //threading
     BOOL updatingMenu;
@@ -93,7 +93,7 @@ enum{kPeriodType,kNumberType,kStringType};
 - (IBAction)openEmail:(id)sender;
 - (IBAction)openDonatation:(id)sender;
 
-- (IBAction)chooseAlertSong:(id)sender;
+//- (IBAction)chooseAlertSong:(id)sender;
 
 - (IBAction)displayLocationClicked:(id)sender;
 

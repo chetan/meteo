@@ -382,8 +382,13 @@ void catchException(NSException *exception)
     isInDock = [prefsController displayInDock];
     isInMenubar = [prefsController displayInMenubar];
     
+    if(isInDock) {
+        NSLog(@"Meteo configured to load in dock");
+    }
+    
     if(isInMenubar)
     {
+        NSLog(@"Meteo configured to load in menubar");
         statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
         [statusItem setTitle:@"Loading..."];
         [statusItem setHighlightMode:YES];
@@ -435,6 +440,8 @@ void catchException(NSException *exception)
 	
 	if ([NSApp isHidden]) // fixes a bug where Meteo wasn't selected if it was a hidden startup item
 		[NSApp unhideWithoutActivation];
+        
+    [versionTF setStringValue:[NSString stringWithFormat:@"Version %@ (build %@)",[[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"],[[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]]];
 		
 }
 
@@ -717,7 +724,7 @@ void catchException(NSException *exception)
 
 - (void)generateMenuWithNewData
 {
-	NSLog(@"generateMenuWithNewData");
+	//NSLog(@"generateMenuWithNewData");
     [self generateMenuWithNewData:YES newCities:NO newCity:NO];
 }
 
@@ -1636,7 +1643,7 @@ NSFont* fontWithMaxHeight(NSString *name, int maxHeight)
         
     [statusItem setImage:img];
     
-    num = [NSNumber numberWithInt:([num intValue]+1)%9];
+    num = [NSNumber numberWithInt:([num intValue]+1)%8+1];
     
     menuBarLoadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadNextInMenuBar) userInfo:num repeats:NO];
 }
