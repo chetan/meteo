@@ -1,0 +1,194 @@
+{\rtf1\mac\ansicpg10000\cocoartf824
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fswiss\fcharset77 Helvetica-Oblique;
+\f3\fswiss\fcharset77 Arial-BoldMT;\f4\fmodern\fcharset77 Courier;\f5\fswiss\fcharset77 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f0\b\fs36 \cf0 Meteorologist \
+
+\f1\b0\fs24 version 2.0a2
+\f0\b \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\i\b0 \cf0 June 4, 2004\
+\
+Meteorologist is changing....
+\f0\i0\b \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f3\fs28 \cf2 This pre-release alpha build of Meteorologist is not for regular users.  It is only for advanced users.  I offer no support for problems encountered with this software.
+\f1\b0\fs36 \cf0 \ul \ulc0 \
+
+\f0\b\fs24 \ulnone \
+\
+Developers wanted!
+\f1\b0 \
+Please stop by the Meteo website and give a post if your interested in helping out.
+\f0\b \
+\
+\
+As an alpha tester:
+\f1\b0   \
+Make a
+\f0\b  
+\f1\b0 backup of your preferences file (at 
+\f4 /Users/<yourname>/Library/Preferences/heat.meteo.plist
+\f1 ) before running the program.  Preference files modified by 2.0a2 are not compatible with version 1.4.x of Meteorologist.  I've included a "double-clickable" file called "
+\f4 meteo_prefs_back.command
+\f1 " which creates a backup by executing the following command:
+\f5   
+\f4\fs20 cp ~/Library/Preferences/com.heat.meteo.plist ~/Library/Preferences/com.heat.meteo1_4_x_backup.plist
+\f5\fs24 \
+
+\f1 \
+\
+
+\f0\b Please test, specifically the following:
+\f1\b0 \
+- The GUI and different preference configurations, noticing any inconsistencies or problems.
+\f0\b \
+\
+System Requirements:  \
+
+\f1\b0 Mac OS X v10.2 - (
+\f2\i If you are running 10.2 and Meteorologist does not work for you, please post the contents of your 
+\f1\i0  
+\f4 ~/Library/Logs/Meteo.log
+\f2\i  file on the Meteorologist website.
+\f1\i0 \
+
+\f0\b \
+\
+Installation:
+\f1\b0   \
+Copy Meteorologists to the Applications Folder (or anywhere else you like) by dragging it from the disk image.\CocoaLigature0 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\tx10560\tx11520\tx12480\tx13440\tx14400\tx15360\tx16320\tx17280\tx18240\tx19200\tx20160\tx21120\tx22080\tx23040\tx24000\tx24960\tx25920\tx26880\tx27840\tx28800\tx29760\tx30720\tx31680\tx32640\tx33600\tx34560\tx35520\tx36480\tx37440\tx38400\tx39360\tx40320\tx41280\tx42240\tx43200\tx44160\tx45120\tx46080\tx47040\tx48000\tx48960\tx49920\tx50880\tx51840\tx52800\tx53760\tx54720\tx55680\tx56640\tx57600\tx58560\tx59520\tx60480\tx61440\tx62400\tx63360\tx64320\tx65280\tx66240\tx67200\tx68160\tx69120\tx70080\tx71040\tx72000\tx72960\tx73920\tx74880\tx75840\tx76800\tx77760\tx78720\tx79680\tx80640\tx81600\tx82560\tx83520\tx84480\tx85440\tx86400\tx87360\tx88320\tx89280\tx90240\tx91200\tx92160\tx93120\tx94080\tx95040\tx96000\ql\qnatural
+\cf0 \CocoaLigature1 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b \cf0 Bugs:
+\f1\b0   \
+If you encounter a bug, please go to the Meteorologist Bug tracker (
+\f4 http://sourceforge.net/tracker/?atid=553756&group_id=78571&func=browse
+\f1 ).  See if your bug is already known for version 2.0a1.  If at all possible, please post all the steps necessary to recreate your bug.  \ul Please post your bugs under as part of the 2.0a "group."\ulnone \
+\
+\
+
+\f0\b When filing a bug report:
+\f1\b0  \
+Please include the contents of your Meteo.log file (found at 
+\f4 ~/Library/Logs/Meteo.log
+\f1 ) as well as the contents of your com.heat.meteo.plist file.
+\f2\i \
+
+\f1\i0 \
+\
+
+\f0\b Known Bugs:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f5\b0 \cf0 - "Old" cities don't show up with 2 weather servers\
+- having multiple servers enabled for a single city doesn't seem to do anything\
+- extended forecast for weather.com and wunderground don't match up\
+- lots of debugging output enabled.
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\
+
+\f0\b Feature Requests / Suggestions:
+\f1\b0   \
+Please post to this forum:  
+\f4 http://sourceforge.net/forum/forum.php?forum_id=386598
+\f1 \
+\
+
+\f0\b Changes to 2.0a2:
+\f1\b0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf0 \CocoaLigature0 - new preferences icons and logo (thanks to Bruce Abel)\
+- refresh after wake up\
+- fix dock\
+- option to disable animation in menu bar\
+- fix drawing of radar image and loading of menu icons for 10.2 implementations\
+- menubar freezes with loading icon\
+- fix the animation - it stops too soon now\
+- fix the font/table for extended forecast items\
+- fix weather.com\
+- make unit tested (especially searching)\
+- Temp now displayed as High/Low\
+- dual C/F temps \
+- fix conversion in "wind" forecast data\
+- significant digits after conversion\
+- About\'c9\
+- get rid of annoying dialogs.\
+- fixed a bug where the menu was not redrawn when the cities are reordered\
+- error message if no plugins are discovered.\
+- User selectable sound FX on Automatic Update and Rotate\
+- Fixed sourceforge bug #1096204\
+- Fixed sf bug #1096222\
+- add option for next update time.\
+- get timers communicating in a better way. now- both reset on change\CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural
+\cf0 \
+
+\f0\b Changes to 2.0a1:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f1\b0 \cf0 \CocoaLigature0 - New MIT (open-source, Free Software Foundation approved) license\
+- Error correcting to maintain backwards compatibility of preferences.\
+- Live updating of changes to menu appearance\
+- A question-mark over the icon reflects the lack of an internet connection\
+- Changed "Last Update" to today relative time.\
+- Feedback that weather data is being downloaded\
+- Ability to specify a custom radar image for a city.\
+- Redirected debug output to ~/Library/Logs/Meteo.log\
+- Added the option to make Meteorologist a startup item.\
+- Re-implemented the method which checks for a new version of meteo so that it is threaded.\
+- Refresh is disabled if there are no cities.\
+- Add checking for internet connection.\
+- Downloading weather data is now threaded. Weather for multiple cities is now simultaneously downloaded.\
+- Implemented a fix N/A style current weather forecast for Weather.com server\
+- It is no longer possible to launch multiple copies of Meteorologist\
+- Lined up the :'s in Weather information and bolded to make more readable (for Mac OS X 10.3)\
+- Consolidated all of the "Last Update" Menu Items to the main menu\
+- No longer displays a "Last Update" time if there hasn't been an update.
+\f0\b \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural
+
+\f1\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+
+\f0\b A Look Ahead- Plans for version 2.0a3:
+\f1\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+
+\f0\b v2.0a3\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0 \cf0 - Preferences file backward compatibility\
+- Fix: "Old" cities don't show up with 2 weather servers\
+- Having multiple servers enabled doesn't seem to do anything\
+- extended forecast for weather.com and wunderground don't match up\
+- fix weather alerts for Weather.com\
+- Better dock menu\
+- make city search threaded.\
+- Update the way that i do userDefaults:  "registerDefaults:appDefaults" and boolForKey: (better preferences reliability)\
+- make image grayscale on error.\
+- manually locate image directory..\
+- check server for new versions of plugins.\
+- create help\
+- Redraw in background with spinner progress visible in preferences window.\
+-Add:\
+	weather.com Hourly Forecast\
+	NOAA -weather.gov\
+	Accuweather\
+	anythingweather.com\
+	rssweather.com\
+-Get localizations done\
+}

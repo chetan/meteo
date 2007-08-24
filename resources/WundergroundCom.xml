@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MEWeatherModuleName</key>
+	<string>Wunderground.com</string>
+	<key>alertURL</key>
+	<string>http://www.weather.com/weather/alerts/%@</string>
+	<key>approxDownload</key>
+	<integer>70</integer>
+	<key>searchCityState</key>
+	<dict>
+		<key>choicesFound</key>
+		<array>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>. &lt;A HREF="/weather/local/</string>
+				<key>multipleMatchString</key>
+				<string>Cities (1 -</string>
+				<key>nameEnd</key>
+				<string>&lt;/A&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>&lt;/B&gt; &lt;A HREF="/weather/local/</string>
+				<key>multipleMatchString</key>
+				<string>Cities (1 -</string>
+				<key>nameEnd</key>
+				<string>&lt;/B&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;&lt;B&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>. &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
+				<key>multipleMatchString</key>
+				<string>Cities (1 -</string>
+				<key>nameEnd</key>
+				<string>&lt;/A&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>&lt;/B&gt; &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
+				<key>multipleMatchString</key>
+				<string>Cities (1 -</string>
+				<key>nameEnd</key>
+				<string>&lt;/B&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;&lt;B&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+			</dict>
+		</array>
+		<key>found</key>
+		<array>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>. &lt;A HREF="/weather/local/</string>
+				<key>nameEnd</key>
+				<string>&lt;/A&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>Cities (1 of 1)</string>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>&lt;/B&gt; &lt;A HREF="/weather/local/</string>
+				<key>nameEnd</key>
+				<string>&lt;/B&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;&lt;B&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>Cities (1 of 1)</string>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>. &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
+				<key>nameEnd</key>
+				<string>&lt;/A&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>Cities (1 of 1)</string>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>?</string>
+				<key>codeStart</key>
+				<string>&lt;/B&gt; &lt;A HREF="/outlook/travel/businesstraveler/local/</string>
+				<key>nameEnd</key>
+				<string>&lt;/B&gt;</string>
+				<key>nameStart</key>
+				<string>search_city"&gt;&lt;B&gt;</string>
+				<key>parseOrder</key>
+				<array>
+					<string>code</string>
+					<string>name</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>Cities (1 of 1)</string>
+			</dict>
+		</array>
+		<key>notFound</key>
+		<array>
+			<string>No items found. Please check your spelling or try another term.</string>
+			<string>Sorry, the page you requested was not found on weather.com.</string>
+		</array>
+		<key>searchURL</key>
+		<string>http://www.weather.com/search/enhanced?where=%@</string>
+	</dict>
+	<key>searchZip</key>
+	<dict>
+		<key>found</key>
+		<array>
+			<dict>
+				<key>codeEnd</key>
+				<string>&gt;</string>
+				<key>codeStart</key>
+				<string>/outlook/travel/print/</string>
+				<key>nameEnd</key>
+				<string>&lt;/B&gt;</string>
+				<key>nameStart</key>
+				<string>Travel Forecast for</string>
+				<key>parseOrder</key>
+				<array>
+					<string>name</string>
+					<string>code</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>weather.com - Local Travel Page</string>
+			</dict>
+			<dict>
+				<key>codeEnd</key>
+				<string>"</string>
+				<key>codeStart</key>
+				<string>?locid=</string>
+				<key>nameEnd</key>
+				<string>(</string>
+				<key>nameStart</key>
+				<string>Local Forecast for </string>
+				<key>parseOrder</key>
+				<array>
+					<string>name</string>
+					<string>code</string>
+				</array>
+				<key>singleMatchString</key>
+				<string>weather.com - Local Weather Page</string>
+			</dict>
+		</array>
+		<key>notFound</key>
+		<array>
+			<string>No items found. Please check your spelling or try another term.</string>
+			<string>Sorry, the page you requested was not found on weather.com.</string>
+		</array>
+		<key>sameAsSearchCityState</key>
+		<false/>
+		<key>searchURL</key>
+		<string>http://www.w3.weather.com/weather/local/%@</string>
+	</dict>
+	<key>weatherImages</key>
+	<dict>
+		<key>chanceflurries</key>
+		<string>Flurries.tiff</string>
+		<key>chancerain</key>
+		<string>Rain.tiff</string>
+		<key>chancesleet</key>
+		<string>Sleet.tiff</string>
+		<key>chancesnow</key>
+		<string>Snow.tiff</string>
+		<key>chancetstorms</key>
+		<string>Thunderstorm.tiff</string>
+		<key>clear</key>
+		<string>Sun.tiff</string>
+		<key>cloudy</key>
+		<string>Cloudy.tiff</string>
+		<key>flurries</key>
+		<string>Flurries.tiff</string>
+		<key>hazy</key>
+		<string>Hazy</string>
+		<key>mostlycloudy</key>
+		<string>Sun-Cloud-2.tiff</string>
+		<key>mostlysunny</key>
+		<string>Sun-Cloud-1.tiff</string>
+		<key>nt_chanceflurries</key>
+		<string>Flurries.tiff</string>
+		<key>nt_chancerain</key>
+		<string>Rain.tiff</string>
+		<key>nt_chancesleet</key>
+		<string>Sleet.tiff</string>
+		<key>nt_chancesnow</key>
+		<string>Snow.tiff</string>
+		<key>nt_chancetstorms</key>
+		<string>Thunderstorm.tiff</string>
+		<key>nt_clear</key>
+		<string>Moon.tiff</string>
+		<key>nt_cloudy</key>
+		<string>Cloudy.tiff</string>
+		<key>nt_flurries</key>
+		<string>Flurries.tiff</string>
+		<key>nt_hazy</key>
+		<string>Hazy.tiff</string>
+		<key>nt_mostlycloudy</key>
+		<string>Moon-Cloud-2.tiff</string>
+		<key>nt_mostlysunny</key>
+		<string>Moon-Cloud-1.tiff</string>
+		<key>nt_partlycloudy</key>
+		<string>Moon-Cloud-1.tiff</string>
+		<key>nt_partlysunny</key>
+		<string>Moon-Cloud-2.tiff</string>
+		<key>nt_rain</key>
+		<string>Rain.tiff</string>
+		<key>nt_sleet</key>
+		<string>Sleet.tiff</string>
+		<key>nt_snow</key>
+		<string>Snow.tiff</string>
+		<key>nt_sunny</key>
+		<string>Moon.tiff</string>
+		<key>nt_tstorms</key>
+		<string>Thunderstorm.tiff</string>
+		<key>nt_unknown</key>
+		<string>unknown.tiff</string>
+		<key>partlycloudy</key>
+		<string>Sun-Cloud-1.tiff</string>
+		<key>partlysunny</key>
+		<string>Sun-Cloud-2.tiff</string>
+		<key>rain</key>
+		<string>Rain.tiff</string>
+		<key>sleet</key>
+		<string>Sleet.tiff</string>
+		<key>snow</key>
+		<string>Snow.tiff</string>
+		<key>sunny</key>
+		<string>Sun.tiff</string>
+		<key>tstorms</key>
+		<string>Thunderstorm.tiff</string>
+		<key>unknown</key>
+		<string>Unknown.tiff</string>
+	</dict>
+</dict>
+</plist>

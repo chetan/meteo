@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>imageFiles</key>
+	<array>
+		<string>Menu Bar Icons/Flurries.tiff</string>
+		<string>Menu Bar Icons/Hazy.tiff</string>
+		<string>Menu Bar Icons/Alert.tiff</string>
+		<string>Menu Bar Icons/Cloudy.tiff</string>
+		<string>Menu Bar Icons/Moon.tiff</string>
+		<string>Menu Bar Icons/Moon-Cloud-1.tiff</string>
+		<string>Menu Bar Icons/Moon-Cloud-2.tiff</string>
+		<string>Menu Bar Icons/Moon.tiff</string>
+		<string>Menu Bar Icons/Rain.tiff</string>
+		<string>Menu Bar Icons/Sleet.tiff</string>
+		<string>Menu Bar Icons/Snow.tiff</string>
+		<string>Menu Bar Icons/Sun-Cloud-1.tiff</string>
+		<string>Menu Bar Icons/Sun-Cloud-2.tiff</string>
+		<string>Menu Bar Icons/Sun.tiff</string>
+		<string>Menu Bar Icons/Thunderstorm.tiff</string>
+		<string>Menu Bar Icons/Unknown.tiff</string>
+		<string>Menu Bar Icons/Cloudy.tiff</string>
+		<string>Menu Bar Icons/Wind.tiff</string>
+		<string>Menu Bar Icons/Loading-1.tiff</string>
+		<string>Menu Bar Icons/Loading-2.tiff</string>
+		<string>Menu Bar Icons/Loading-3.tiff</string>
+		<string>Menu Bar Icons/Loading-4.tiff</string>
+		<string>Menu Bar Icons/Loading-5.tiff</string>
+		<string>Menu Bar Icons/Loading-6.tiff</string>
+		<string>Menu Bar Icons/Loading-7.tiff</string>
+		<string>Menu Bar Icons/Loading-8.tiff</string>
+		<string>Menu Bar Icons/Unavailable.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-1.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-2.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-3.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-4.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-5.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-6.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-7.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-8.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-9.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-10.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-11.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-12.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-13.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-14.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-15.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-16.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-17.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-18.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-19.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-20.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-21.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-22.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-23.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-24.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-25.tiff</string>
+		<string>Dock Icons/Moon Phase/MoonPhase-26.tiff</string>
+		<string>Dock Icons/Television/Television-Day-Screen.tiff</string>
+		<string>Dock Icons/Television/Television-Day.tiff</string>
+		<string>Dock Icons/Television/Television-Night-Screen.tiff</string>
+		<string>Dock Icons/Television/Television-Night.tiff</string>
+		<string>Dock Icons/Television/Television.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-1.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-2.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-3.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-4.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-5.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-6.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-7.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-8.tiff</string>
+		<string>Dock Icons/Temperature/Temperature-9.tiff</string>
+		<string>Dock Icons/Weather Status/Moon-Cloud-1.tiff</string>
+		<string>Dock Icons/Weather Status/Moon-Cloud-2.tiff</string>
+		<string>Dock Icons/Weather Status/Sun-Cloud-1.tiff</string>
+		<string>Dock Icons/Weather Status/Sun-Cloud-2.tiff</string>
+		<string>Dock Icons/Weather Status/Cloudy.tiff</string>
+		<string>Dock Icons/Weather Status/Alert.tiff</string>
+		<string>Dock Icons/Weather Status/Sun.tiff</string>
+		<string>Dock Icons/Weather Status/Hazy.tiff</string>
+		<string>Dock Icons/Weather Status/Moon.tiff</string>
+		<string>Dock Icons/Weather Status/Rain.tiff</string>
+		<string>Dock Icons/Weather Status/Snow.tiff</string>
+		<string>Dock Icons/Weather Status/Flurries.tiff</string>
+		<string>Dock Icons/Weather Status/Sleet.tiff</string>
+		<string>Dock Icons/Weather Status/Thunderstorm.tiff</string>
+		<string>Dock Icons/Weather Status/Unknown.tiff</string>
+		<string>Dock Icons/Weather Status/Wind.tiff</string>
+	</array>
+</dict>
+</plist>

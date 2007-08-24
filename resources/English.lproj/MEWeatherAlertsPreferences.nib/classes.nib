@@ -1,0 +1,38 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {actionPerformed = id; }; 
+            CLASS = MEWeatherAlertsPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bounceDockButton = NSButton; 
+                emailAddress = NSTextField; 
+                emailButton = NSButton; 
+                songButton = NSButton; 
+                songMenu = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSPreferencesModule; 
+        }, 
+        {
+            ACTIONS = {apply = id; cancel = id; ok = id; selectModule = id; }; 
+            CLASS = NSPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                cancelButton = id; 
+                moduleMatrix = id; 
+                okButton = id; 
+                preferencesPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_preferencesView" = NSBox; preferencesView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

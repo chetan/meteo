@@ -1,0 +1,7 @@
+Starting with version 1.4.0b2, Meteorologist began using CURLHandler instead of NSURLHandler.
+
+You must download the CURLHandler framework from: http://curlhandle.sourceforge.net/ in order to compile.
+
+Joe Crobak
+
+01/02/05 - WeatherCom.xml: weatherImages: 13 was changed to Snow.tiff from Rain.tiff

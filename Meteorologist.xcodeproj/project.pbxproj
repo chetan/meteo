@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		51093B110C03AF3200202293 /* IXSCNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IXSCNotificationManager.h; sourceTree = "<group>"; };
+		51093B120C03AF3200202293 /* IXSCNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = IXSCNotificationManager.m; sourceTree = "<group>"; };
+		51093B130C03AF3200202293 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		51093B160C03AF3200202293 /* MEAppearancePreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEAppearancePreferencesModule.h; path = "src+headers/MEAppearancePreferencesModule.h"; sourceTree = "<group>"; };
+		51093B170C03AF3200202293 /* MEAppearancePreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEAppearancePreferencesModule.m; path = "src+headers/MEAppearancePreferencesModule.m"; sourceTree = "<group>"; };
+		51093B180C03AF3300202293 /* MECity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MECity.h; sourceTree = "<group>"; };
+		51093B190C03AF3300202293 /* MECity.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MECity.m; sourceTree = "<group>"; };
+		51093B1A0C03AF3300202293 /* MECityEditor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MECityEditor.h; sourceTree = "<group>"; };
+		51093B1B0C03AF3300202293 /* MECityEditor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MECityEditor.m; sourceTree = "<group>"; };
+		51093B1C0C03AF3300202293 /* MECityPreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MECityPreferencesModule.h; path = "src+headers/MECityPreferencesModule.h"; sourceTree = "<group>"; };
+		51093B1D0C03AF3300202293 /* MECityPreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MECityPreferencesModule.m; path = "src+headers/MECityPreferencesModule.m"; sourceTree = "<group>"; };
+		51093B1E0C03AF3300202293 /* MECitySearchResultsTable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MECitySearchResultsTable.h; path = "src+headers/MECitySearchResultsTable.h"; sourceTree = "<group>"; };
+		51093B1F0C03AF3300202293 /* MECitySearchResultsTable.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MECitySearchResultsTable.m; path = "src+headers/MECitySearchResultsTable.m"; sourceTree = "<group>"; };
+		51093B200C03AF3300202293 /* MEConstants.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEConstants.h; sourceTree = "<group>"; };
+		51093B210C03AF3300202293 /* MEController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEController.h; sourceTree = "<group>"; };
+		51093B220C03AF3300202293 /* MEController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEController.m; sourceTree = "<group>"; };
+		51093B230C03AF3300202293 /* MEGeneralPreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEGeneralPreferencesModule.h; path = "src+headers/MEGeneralPreferencesModule.h"; sourceTree = "<group>"; };
+		51093B240C03AF3300202293 /* MEGeneralPreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEGeneralPreferencesModule.m; path = "src+headers/MEGeneralPreferencesModule.m"; sourceTree = "<group>"; };
+		51093B250C03AF3300202293 /* MEGenericTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEGenericTableDataSource.h; path = "src+headers/MEGenericTableDataSource.h"; sourceTree = "<group>"; };
+		51093B260C03AF3300202293 /* MEGenericTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEGenericTableDataSource.m; path = "src+headers/MEGenericTableDataSource.m"; sourceTree = "<group>"; };
+		51093B270C03AF3300202293 /* MELiveFeedbackSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MELiveFeedbackSlider.h; path = "src+headers/MELiveFeedbackSlider.h"; sourceTree = "<group>"; };
+		51093B280C03AF3300202293 /* MELiveFeedbackSlider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MELiveFeedbackSlider.m; path = "src+headers/MELiveFeedbackSlider.m"; sourceTree = "<group>"; };
+		51093B290C03AF3300202293 /* MEPlug-inManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "MEPlug-inManager.h"; path = "src+headers/MEPlug-inManager.h"; sourceTree = "<group>"; };
+		51093B2A0C03AF3300202293 /* MEPlug-inManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "MEPlug-inManager.m"; path = "src+headers/MEPlug-inManager.m"; sourceTree = "<group>"; };
+		51093B2B0C03AF3300202293 /* MEPrefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEPrefs.h; sourceTree = "<group>"; };
+		51093B2C0C03AF3300202293 /* MEPrefs.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEPrefs.m; sourceTree = "<group>"; };
+		51093B2D0C03AF3300202293 /* MEPropertyDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEPropertyDataSource.h; path = "src+headers/MEPropertyDataSource.h"; sourceTree = "<group>"; };
+		51093B2E0C03AF3300202293 /* MEPropertyDataSource.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEPropertyDataSource.m; path = "src+headers/MEPropertyDataSource.m"; sourceTree = "<group>"; };
+		51093B2F0C03AF3300202293 /* MEServerTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEServerTableDataSource.h; path = "src+headers/MEServerTableDataSource.h"; sourceTree = "<group>"; };
+		51093B300C03AF3300202293 /* MEServerTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEServerTableDataSource.m; path = "src+headers/MEServerTableDataSource.m"; sourceTree = "<group>"; };
+		51093B310C03AF3300202293 /* MEStringSearcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEStringSearcher.h; sourceTree = "<group>"; };
+		51093B320C03AF3300202293 /* MEStringSearcher.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEStringSearcher.m; sourceTree = "<group>"; };
+		51093B330C03AF3300202293 /* Meteorologist_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Meteorologist_Prefix.h; sourceTree = "<group>"; };
+		51093B340C03AF3300202293 /* METestWeatherItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = METestWeatherItem.h; sourceTree = "<group>"; };
+		51093B350C03AF3300202293 /* METestWeatherItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = METestWeatherItem.m; sourceTree = "<group>"; };
+		51093B360C03AF3300202293 /* MEWeather.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEWeather.h; sourceTree = "<group>"; };
+		51093B370C03AF3300202293 /* MEWeather.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEWeather.m; sourceTree = "<group>"; };
+		51093B380C03AF3300202293 /* MEWeatherAlertsPreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEWeatherAlertsPreferencesModule.h; path = "src+headers/MEWeatherAlertsPreferencesModule.h"; sourceTree = "<group>"; };
+		51093B390C03AF3300202293 /* MEWeatherAlertsPreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEWeatherAlertsPreferencesModule.m; path = "src+headers/MEWeatherAlertsPreferencesModule.m"; sourceTree = "<group>"; };
+		51093B3A0C03AF3300202293 /* MEWeatherCom.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEWeatherCom.h; path = "src+headers/MEWeatherCom.h"; sourceTree = "<group>"; };
+		51093B3B0C03AF3300202293 /* MEWeatherCom.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEWeatherCom.m; path = "src+headers/MEWeatherCom.m"; sourceTree = "<group>"; };
+		51093B3C0C03AF3300202293 /* MEWeatherItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEWeatherItem.h; sourceTree = "<group>"; };
+		51093B3D0C03AF3300202293 /* MEWeatherItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEWeatherItem.m; sourceTree = "<group>"; };
+		51093B3E0C03AF3300202293 /* MEWeatherModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEWeatherModule.h; path = "src+headers/MEWeatherModule.h"; sourceTree = "<group>"; };
+		51093B3F0C03AF3300202293 /* MEWeatherModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEWeatherModule.m; path = "src+headers/MEWeatherModule.m"; sourceTree = "<group>"; };
+		51093B400C03AF3300202293 /* MEWeatherModuleParser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEWeatherModuleParser.h; sourceTree = "<group>"; };
+		51093B410C03AF3300202293 /* MEWeatherModuleParser.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEWeatherModuleParser.m; sourceTree = "<group>"; };
+		51093B420C03AF3300202293 /* MEWebUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MEWebUtils.h; sourceTree = "<group>"; };
+		51093B430C03AF3300202293 /* MEWebUtils.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MEWebUtils.m; sourceTree = "<group>"; };
+		51093B440C03AF3300202293 /* MEWundergroundCom.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MEWundergroundCom.h; path = "src+headers/MEWundergroundCom.h"; sourceTree = "<group>"; };
+		51093B450C03AF3300202293 /* MEWundergroundCom.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MEWundergroundCom.m; path = "src+headers/MEWundergroundCom.m"; sourceTree = "<group>"; };
+		51093B460C03AF3300202293 /* MFAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MFAlertManager.h; sourceTree = "<group>"; };
+		51093B470C03AF3300202293 /* MFAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MFAlertManager.m; sourceTree = "<group>"; };
+		51093B480C03AF3300202293 /* MSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MSPreferences.h; path = "src+headers/MSPreferences.h"; sourceTree = "<group>"; };
+		51093B490C03AF3300202293 /* MSPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MSPreferences.m; path = "src+headers/MSPreferences.m"; sourceTree = "<group>"; };
+		51093B4A0C03AF3300202293 /* NSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSPreferences.h; path = "src+headers/NSPreferences.h"; sourceTree = "<group>"; };
+		51093B4B0C03AF3300202293 /* NSString-Additions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSString-Additions.h"; sourceTree = "<group>"; };
+		51093B4C0C03AF3300202293 /* NSString-Additions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "NSString-Additions.m"; sourceTree = "<group>"; };
+		51093B4D0C03AF3300202293 /* NSUserDefaults+MEColorSupport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MEColorSupport.h"; sourceTree = "<group>"; };
+		51093B4E0C03AF3300202293 /* NSUserDefaults+MEColorSupport.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MEColorSupport.m"; sourceTree = "<group>"; };
+		51093B500C03AF5900202293 /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add.tiff; sourceTree = "<group>"; };
+		51093B510C03AF5900202293 /* add_pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add_pressed.tiff; sourceTree = "<group>"; };
+		51093B530C03AF5900202293 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		51093B550C03AF5900202293 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		51093B570C03AF5900202293 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MEAppearancePreferences.nib; sourceTree = "<group>"; };
+		51093B590C03AF5900202293 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MECityPreferences.nib; sourceTree = "<group>"; };
+		51093B5B0C03AF5900202293 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MEGeneralPreferences.nib; sourceTree = "<group>"; };
+		51093B5D0C03AF5900202293 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MEWeatherAlertsPreferences.nib; sourceTree = "<group>"; };
+		51093B5E0C03AF5900202293 /* MEAppearancePreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MEAppearancePreferences.tiff; sourceTree = "<group>"; };
+		51093B5F0C03AF5900202293 /* MECityPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MECityPreferences.tiff; sourceTree = "<group>"; };
+		51093B600C03AF5900202293 /* MEGeneralPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MEGeneralPreferences.tiff; sourceTree = "<group>"; };
+		51093B610C03AF5900202293 /* Meteo-Logo-Old.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Meteo-Logo-Old.tiff"; sourceTree = "<group>"; };
+		51093B620C03AF5900202293 /* Meteo-Logo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Meteo-Logo.tiff"; sourceTree = "<group>"; };
+		51093B630C03AF5900202293 /* meteo-old.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "meteo-old.icns"; sourceTree = "<group>"; };
+		51093B640C03AF5900202293 /* meteo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = meteo.icns; sourceTree = "<group>"; };
+		51093B650C03AF5900202293 /* meteo.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = meteo.xml; sourceTree = "<group>"; };
+		51093B660C03AF5900202293 /* meteo16x16.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = meteo16x16.tiff; sourceTree = "<group>"; };
+		51093B670C03AF5900202293 /* MEWeatherAlertPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MEWeatherAlertPreferences.tiff; sourceTree = "<group>"; };
+		51093B680C03AF5900202293 /* remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = remove.tiff; sourceTree = "<group>"; };
+		51093B690C03AF5900202293 /* remove_pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = remove_pressed.tiff; sourceTree = "<group>"; };
+		51093B6A0C03AF5A00202293 /* Testing-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Testing-Info.plist"; sourceTree = "<group>"; };
+		51093B770C03B05500202293 /* Meteorologist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Meteorologist-Info.plist"; sourceTree = "<group>"; };
+		51093C190C06947A00202293 /* WeatherCom Module-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "WeatherCom Module-Info.plist"; path = "resources/WeatherCom Module-Info.plist"; sourceTree = "<group>"; };
+		51093C1A0C06947A00202293 /* WeatherCom.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = WeatherCom.xml; path = resources/WeatherCom.xml; sourceTree = "<group>"; };
+		51093C1D0C06948200202293 /* WundergroundCom Module-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "WundergroundCom Module-Info.plist"; path = "resources/WundergroundCom Module-Info.plist"; sourceTree = "<group>"; };
+		51093C1E0C06948200202293 /* WundergroundCom.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = WundergroundCom.xml; path = resources/WundergroundCom.xml; sourceTree = "<group>"; };
+		51093C240C06956C00202293 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		51093C250C06956C00202293 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		51093C260C06956C00202293 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		51093C2A0C06958D00202293 /* CURLHandle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CURLHandle.framework; path = frameworks/CURLHandle.framework; sourceTree = "<group>"; };
+		51093C300C0695D800202293 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
+		51093C390C06964A00202293 /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Meteorologist.app; path = build/Release/Meteorologist.app; sourceTree = "<group>"; };
+		51093C4E0C06968100202293 /* WeatherCom.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WeatherCom.bundle; path = build/Release/WeatherCom.bundle; sourceTree = "<group>"; };
+		51093C4F0C06968100202293 /* WeatherCom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WeatherCom-Info.plist"; sourceTree = "<group>"; };
+		51093C570C06969800202293 /* WundergroundCom.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WundergroundCom.bundle; path = build/Release/WundergroundCom.bundle; sourceTree = "<group>"; };
+		51093C580C06969800202293 /* WundergroundCom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WundergroundCom-Info.plist"; sourceTree = "<group>"; };
+		51093C670C06996300202293 /* Testing.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Testing.octest; path = build/Release/Testing.octest; sourceTree = "<group>"; };
+		51093C680C06996400202293 /* Testing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Testing-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51093C370C06964A00202293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C4C0C06968100202293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C550C06969800202293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C640C06996300202293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51093B100C03AF3200202293 /* src+headers */ = {
+			isa = PBXGroup;
+			children = (
+				51093BFD0C0691BE00202293 /* Classes */,
+				51093BFB0C06914200202293 /* Old Classes */,
+				51093B130C03AF3200202293 /* main.m */,
+				51093B330C03AF3300202293 /* Meteorologist_Prefix.h */,
+			);
+			path = "src+headers";
+			sourceTree = "<group>";
+		};
+		51093B4F0C03AF5900202293 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				51093B500C03AF5900202293 /* add.tiff */,
+				51093B510C03AF5900202293 /* add_pressed.tiff */,
+				51093B520C03AF5900202293 /* InfoPlist.strings */,
+				51093B540C03AF5900202293 /* MainMenu.nib */,
+				51093B560C03AF5900202293 /* MEAppearancePreferences.nib */,
+				51093B580C03AF5900202293 /* MECityPreferences.nib */,
+				51093B5A0C03AF5900202293 /* MEGeneralPreferences.nib */,
+				51093B5C0C03AF5900202293 /* MEWeatherAlertsPreferences.nib */,
+				51093B5E0C03AF5900202293 /* MEAppearancePreferences.tiff */,
+				51093B5F0C03AF5900202293 /* MECityPreferences.tiff */,
+				51093B600C03AF5900202293 /* MEGeneralPreferences.tiff */,
+				51093B610C03AF5900202293 /* Meteo-Logo-Old.tiff */,
+				51093B620C03AF5900202293 /* Meteo-Logo.tiff */,
+				51093B630C03AF5900202293 /* meteo-old.icns */,
+				51093B640C03AF5900202293 /* meteo.icns */,
+				51093B650C03AF5900202293 /* meteo.xml */,
+				51093B660C03AF5900202293 /* meteo16x16.tiff */,
+				51093B670C03AF5900202293 /* MEWeatherAlertPreferences.tiff */,
+				51093B680C03AF5900202293 /* remove.tiff */,
+				51093B690C03AF5900202293 /* remove_pressed.tiff */,
+				51093B6A0C03AF5A00202293 /* Testing-Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		51093B750C03B05500202293 /* Preference Modules */ = {
+			isa = PBXGroup;
+			children = (
+				51093B250C03AF3300202293 /* MEGenericTableDataSource.h */,
+				51093B260C03AF3300202293 /* MEGenericTableDataSource.m */,
+				51093B480C03AF3300202293 /* MSPreferences.h */,
+				51093B490C03AF3300202293 /* MSPreferences.m */,
+				51093B4A0C03AF3300202293 /* NSPreferences.h */,
+				51093C020C06927800202293 /* Appearance Preferences */,
+				51093C010C06926200202293 /* City Preferences */,
+				51093C000C06925A00202293 /* General Preferences */,
+				51093C030C06928500202293 /* Weather Alerts Preferences */,
+				51093C390C06964A00202293 /* Meteorologist.app */,
+				51093C4E0C06968100202293 /* WeatherCom.bundle */,
+				51093C570C06969800202293 /* WundergroundCom.bundle */,
+				51093C670C06996300202293 /* Testing.octest */,
+			);
+			name = "Preference Modules";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		51093BFB0C06914200202293 /* Old Classes */ = {
+			isa = PBXGroup;
+			children = (
+				51093B310C03AF3300202293 /* MEStringSearcher.h */,
+				51093B360C03AF3300202293 /* MEWeather.h */,
+				51093B370C03AF3300202293 /* MEWeather.m */,
+				51093B400C03AF3300202293 /* MEWeatherModuleParser.h */,
+				51093B410C03AF3300202293 /* MEWeatherModuleParser.m */,
+				51093B1A0C03AF3300202293 /* MECityEditor.h */,
+				51093B1B0C03AF3300202293 /* MECityEditor.m */,
+				51093B2B0C03AF3300202293 /* MEPrefs.h */,
+				51093B2C0C03AF3300202293 /* MEPrefs.m */,
+			);
+			name = "Old Classes";
+			sourceTree = "<group>";
+		};
+		51093BFC0C06918000202293 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				51093B340C03AF3300202293 /* METestWeatherItem.h */,
+				51093B350C03AF3300202293 /* METestWeatherItem.m */,
+			);
+			name = "Unit Tests";
+			path = "src+headers";
+			sourceTree = "<group>";
+		};
+		51093BFD0C0691BE00202293 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				51093B110C03AF3200202293 /* IXSCNotificationManager.h */,
+				51093B120C03AF3200202293 /* IXSCNotificationManager.m */,
+				51093B200C03AF3300202293 /* MEConstants.h */,
+				51093B210C03AF3300202293 /* MEController.h */,
+				51093B220C03AF3300202293 /* MEController.m */,
+				51093B180C03AF3300202293 /* MECity.h */,
+				51093B190C03AF3300202293 /* MECity.m */,
+				51093B3C0C03AF3300202293 /* MEWeatherItem.h */,
+				51093B3D0C03AF3300202293 /* MEWeatherItem.m */,
+				51093B420C03AF3300202293 /* MEWebUtils.h */,
+				51093B430C03AF3300202293 /* MEWebUtils.m */,
+				51093B320C03AF3300202293 /* MEStringSearcher.m */,
+				51093B460C03AF3300202293 /* MFAlertManager.h */,
+				51093B470C03AF3300202293 /* MFAlertManager.m */,
+				51093B4B0C03AF3300202293 /* NSString-Additions.h */,
+				51093B4C0C03AF3300202293 /* NSString-Additions.m */,
+				51093B4D0C03AF3300202293 /* NSUserDefaults+MEColorSupport.h */,
+				51093B4E0C03AF3300202293 /* NSUserDefaults+MEColorSupport.m */,
+				51093B750C03B05500202293 /* Preference Modules */,
+				51093BFF0C06920900202293 /* Weather Modules */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		51093BFF0C06920900202293 /* Weather Modules */ = {
+			isa = PBXGroup;
+			children = (
+				51093C160C0693E600202293 /* MEWeatherCom */,
+				51093C150C0693DA00202293 /* MEWundergroundCom */,
+				51093B290C03AF3300202293 /* MEPlug-inManager.h */,
+				51093B2A0C03AF3300202293 /* MEPlug-inManager.m */,
+				51093B3E0C03AF3300202293 /* MEWeatherModule.h */,
+				51093B3F0C03AF3300202293 /* MEWeatherModule.m */,
+			);
+			name = "Weather Modules";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		51093C000C06925A00202293 /* General Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				51093B230C03AF3300202293 /* MEGeneralPreferencesModule.h */,
+				51093B240C03AF3300202293 /* MEGeneralPreferencesModule.m */,
+				51093B270C03AF3300202293 /* MELiveFeedbackSlider.h */,
+				51093B280C03AF3300202293 /* MELiveFeedbackSlider.m */,
+			);
+			name = "General Preferences";
+			sourceTree = "<group>";
+		};
+		51093C010C06926200202293 /* City Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				51093B1C0C03AF3300202293 /* MECityPreferencesModule.h */,
+				51093B1D0C03AF3300202293 /* MECityPreferencesModule.m */,
+				51093B1E0C03AF3300202293 /* MECitySearchResultsTable.h */,
+				51093B1F0C03AF3300202293 /* MECitySearchResultsTable.m */,
+				51093B2F0C03AF3300202293 /* MEServerTableDataSource.h */,
+				51093B300C03AF3300202293 /* MEServerTableDataSource.m */,
+			);
+			name = "City Preferences";
+			sourceTree = "<group>";
+		};
+		51093C020C06927800202293 /* Appearance Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				51093B160C03AF3200202293 /* MEAppearancePreferencesModule.h */,
+				51093B170C03AF3200202293 /* MEAppearancePreferencesModule.m */,
+				51093B2D0C03AF3300202293 /* MEPropertyDataSource.h */,
+				51093B2E0C03AF3300202293 /* MEPropertyDataSource.m */,
+			);
+			name = "Appearance Preferences";
+			sourceTree = "<group>";
+		};
+		51093C030C06928500202293 /* Weather Alerts Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				51093B380C03AF3300202293 /* MEWeatherAlertsPreferencesModule.h */,
+				51093B390C03AF3300202293 /* MEWeatherAlertsPreferencesModule.m */,
+			);
+			name = "Weather Alerts Preferences";
+			sourceTree = "<group>";
+		};
+		51093C150C0693DA00202293 /* MEWundergroundCom */ = {
+			isa = PBXGroup;
+			children = (
+				51093B440C03AF3300202293 /* MEWundergroundCom.h */,
+				51093B450C03AF3300202293 /* MEWundergroundCom.m */,
+				51093C1D0C06948200202293 /* WundergroundCom Module-Info.plist */,
+				51093C1E0C06948200202293 /* WundergroundCom.xml */,
+			);
+			name = MEWundergroundCom;
+			sourceTree = "<group>";
+		};
+		51093C160C0693E600202293 /* MEWeatherCom */ = {
+			isa = PBXGroup;
+			children = (
+				51093B3A0C03AF3300202293 /* MEWeatherCom.h */,
+				51093B3B0C03AF3300202293 /* MEWeatherCom.m */,
+				51093C190C06947A00202293 /* WeatherCom Module-Info.plist */,
+				51093C1A0C06947A00202293 /* WeatherCom.xml */,
+			);
+			name = MEWeatherCom;
+			sourceTree = "<group>";
+		};
+		51093C210C0694EF00202293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51093C300C0695D800202293 /* SenTestingKit.framework */,
+				51093C2A0C06958D00202293 /* CURLHandle.framework */,
+				51093C240C06956C00202293 /* AppKit.framework */,
+				51093C250C06956C00202293 /* Cocoa.framework */,
+				51093C260C06956C00202293 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51093C220C06950200202293 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		514D82960A097C5A00983E83 = {
+			isa = PBXGroup;
+			children = (
+				51093B4F0C03AF5900202293 /* resources */,
+				51093B100C03AF3200202293 /* src+headers */,
+				51093BFC0C06918000202293 /* Unit Tests */,
+				51093C210C0694EF00202293 /* Frameworks */,
+				51093C220C06950200202293 /* Products */,
+				51093B770C03B05500202293 /* Meteorologist-Info.plist */,
+				51093C4F0C06968100202293 /* WeatherCom-Info.plist */,
+				51093C580C06969800202293 /* WundergroundCom-Info.plist */,
+				51093C680C06996400202293 /* Testing-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51093C380C06964A00202293 /* Meteorologist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51093C3B0C06966900202293 /* Build configuration list for PBXNativeTarget "Meteorologist" */;
+			buildPhases = (
+				51093C350C06964A00202293 /* Resources */,
+				51093C360C06964A00202293 /* Sources */,
+				51093C370C06964A00202293 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Meteorologist;
+			productName = Meteorologist;
+			productReference = 51093C390C06964A00202293 /* Meteorologist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51093C4D0C06968100202293 /* WeatherCom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51093C500C06968200202293 /* Build configuration list for PBXNativeTarget "WeatherCom" */;
+			buildPhases = (
+				51093C4A0C06968100202293 /* Resources */,
+				51093C4B0C06968100202293 /* Sources */,
+				51093C4C0C06968100202293 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherCom;
+			productName = WeatherCom;
+			productReference = 51093C4E0C06968100202293 /* WeatherCom.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		51093C560C06969800202293 /* WundergroundCom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51093C590C06969900202293 /* Build configuration list for PBXNativeTarget "WundergroundCom" */;
+			buildPhases = (
+				51093C530C06969800202293 /* Resources */,
+				51093C540C06969800202293 /* Sources */,
+				51093C550C06969800202293 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WundergroundCom;
+			productName = WundergroundCom;
+			productReference = 51093C570C06969800202293 /* WundergroundCom.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		51093C660C06996300202293 /* Testing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51093C690C06996400202293 /* Build configuration list for PBXNativeTarget "Testing" */;
+			buildPhases = (
+				51093C620C06996300202293 /* Resources */,
+				51093C630C06996300202293 /* Sources */,
+				51093C640C06996300202293 /* Frameworks */,
+				51093C650C06996300202293 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Testing;
+			productName = Testing;
+			productReference = 51093C670C06996300202293 /* Testing.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		514D82980A097C5A00983E83 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 514D82990A097C5A00983E83 /* Build configuration list for PBXProject "Meteorologist" */;
+			hasScannedForEncodings = 0;
+			mainGroup = 514D82960A097C5A00983E83;
+			productRefGroup = 51093B750C03B05500202293 /* Preference Modules */;
+			projectDirPath = "";
+			targets = (
+				51093C380C06964A00202293 /* Meteorologist */,
+				51093C4D0C06968100202293 /* WeatherCom */,
+				51093C560C06969800202293 /* WundergroundCom */,
+				51093C660C06996300202293 /* Testing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51093C350C06964A00202293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C4A0C06968100202293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C530C06969800202293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C620C06996300202293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51093C650C06996300202293 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51093C360C06964A00202293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C4B0C06968100202293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C540C06969800202293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51093C630C06996300202293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		51093B520C03AF5900202293 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B530C03AF5900202293 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		51093B540C03AF5900202293 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B550C03AF5900202293 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		51093B560C03AF5900202293 /* MEAppearancePreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B570C03AF5900202293 /* English */,
+			);
+			name = MEAppearancePreferences.nib;
+			sourceTree = "<group>";
+		};
+		51093B580C03AF5900202293 /* MECityPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B590C03AF5900202293 /* English */,
+			);
+			name = MECityPreferences.nib;
+			sourceTree = "<group>";
+		};
+		51093B5A0C03AF5900202293 /* MEGeneralPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B5B0C03AF5900202293 /* English */,
+			);
+			name = MEGeneralPreferences.nib;
+			sourceTree = "<group>";
+		};
+		51093B5C0C03AF5900202293 /* MEWeatherAlertsPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51093B5D0C03AF5900202293 /* English */,
+			);
+			name = MEWeatherAlertsPreferences.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51093C3C0C06966900202293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Meteorologist-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Meteorologist;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		51093C3D0C06966900202293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Meteorologist-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Meteorologist;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		51093C510C06968200202293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "WeatherCom-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WeatherCom;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		51093C520C06968200202293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "WeatherCom-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WeatherCom;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		51093C5A0C06969900202293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "WundergroundCom-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WundergroundCom;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		51093C5B0C06969900202293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "WundergroundCom-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WundergroundCom;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		51093C6A0C06996400202293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Testing-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Testing;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		51093C6B0C06996400202293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Testing-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Testing;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		514D829A0A097C5A00983E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		514D829B0A097C5A00983E83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51093C3B0C06966900202293 /* Build configuration list for PBXNativeTarget "Meteorologist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51093C3C0C06966900202293 /* Debug */,
+				51093C3D0C06966900202293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51093C500C06968200202293 /* Build configuration list for PBXNativeTarget "WeatherCom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51093C510C06968200202293 /* Debug */,
+				51093C520C06968200202293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51093C590C06969900202293 /* Build configuration list for PBXNativeTarget "WundergroundCom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51093C5A0C06969900202293 /* Debug */,
+				51093C5B0C06969900202293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51093C690C06996400202293 /* Build configuration list for PBXNativeTarget "Testing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51093C6A0C06996400202293 /* Debug */,
+				51093C6B0C06996400202293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		514D82990A097C5A00983E83 /* Build configuration list for PBXProject "Meteorologist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				514D829A0A097C5A00983E83 /* Debug */,
+				514D829B0A097C5A00983E83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 514D82980A097C5A00983E83 /* Project object */;
+}

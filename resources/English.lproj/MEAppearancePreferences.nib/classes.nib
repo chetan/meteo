@@ -1,0 +1,62 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                actionPerformed = id; 
+                displayGeneralHelp = id; 
+                displayLayoutHelp = id; 
+                displayLocationChange = id; 
+                enableExtendedForecastClicked = id; 
+                showTempAsBothClicked = id; 
+            }; 
+            CLASS = MEAppearancePreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                appearancesTabView = NSTabView; 
+                currentConditionsInSubMenu = NSButton; 
+                daysInForecast = NSPopUpButton; 
+                displayCityName = NSButton; 
+                displayIcon = NSButton; 
+                displayLocation = NSMatrix; 
+                displayTemp = NSButton; 
+                dockColor = NSColorWell; 
+                dockFontName = NSPopUpButton; 
+                dockImageOpacity = NSSlider; 
+                enableExtendedForecast = NSButton; 
+                extendedForecastInSubmenu = NSButton; 
+                forecastOnOneLine = NSButton; 
+                forecastPropertiesTable = NSTableView; 
+                menuColor = NSColorWell; 
+                menuFontName = NSPopUpButton; 
+                menuFontSize = NSPopUpButton; 
+                propertiesTable = NSTableView; 
+                showBothCF = NSButton; 
+                showTempUnits = NSButton; 
+                showWeatherIcons = NSButton; 
+                units = NSMatrix; 
+            }; 
+            SUPERCLASS = NSPreferencesModule; 
+        }, 
+        {
+            ACTIONS = {apply = id; cancel = id; ok = id; selectModule = id; }; 
+            CLASS = NSPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                cancelButton = id; 
+                moduleMatrix = id; 
+                okButton = id; 
+                preferencesPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_preferencesView" = NSBox; preferencesView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

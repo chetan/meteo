@@ -1,0 +1,63 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                actionPerformed = id; 
+                checkForNewVersionNow = id; 
+                displayHelp = id; 
+                rotateCityCheckbox = id; 
+                rotateSliderMoved = id; 
+                showNextUpdateTimeClicked = id; 
+                soundMenuClicked = id; 
+                updateCityCheckbox = id; 
+                updateSliderMoved = id; 
+            }; 
+            CLASS = MEGeneralPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                animateUpdatesCheckBox = NSButton; 
+                autoRotateSound = NSTextField; 
+                autoRotateSoundPopUp = NSPopUpButton; 
+                autoUpdateSound = NSTextField; 
+                autoUpdateSoundPopUp = NSPopUpButton; 
+                checkForNewVersion = NSButton; 
+                launchAtLogin = NSButton; 
+                rotateCheckBox = NSButton; 
+                rotateTime = NSTextField; 
+                rotateTimeSlider = MELiveFeedbackSlider; 
+                showNextUpdateTime = NSButton; 
+                updateCheckBox = NSButton; 
+                updateTime = NSTextField; 
+                updateTimeSlider = MELiveFeedbackSlider; 
+            }; 
+            SUPERCLASS = NSPreferencesModule; 
+        }, 
+        {
+            CLASS = MELiveFeedbackSlider; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {sliderTextValue = NSTextField; }; 
+            SUPERCLASS = NSSlider; 
+        }, 
+        {
+            ACTIONS = {apply = id; cancel = id; ok = id; selectModule = id; }; 
+            CLASS = NSPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                cancelButton = id; 
+                moduleMatrix = id; 
+                okButton = id; 
+                preferencesPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_preferencesView" = NSBox; preferencesView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

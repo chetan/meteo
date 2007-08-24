@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                actionPerformed = id; 
+                addServer = id; 
+                cancelAddServer = id; 
+                displaySearchSheet = id; 
+                editCity = id; 
+                newCity = id; 
+                openAdvancedOptionsHelp = id; 
+                openCitySearchHelp = id; 
+                openServerHelp = id; 
+                performSearch = id; 
+                previewCustomRadarImage = id; 
+                removeCity = id; 
+                toggleCustomRadarImageCheckbox = id; 
+            }; 
+            CLASS = MECityPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addCity = NSButton; 
+                addServer = NSButton; 
+                cityName = NSTextField; 
+                cityTable = NSTableView; 
+                customImageURL = NSTextField; 
+                imagePreview = NSImageView; 
+                imagePreviewWindow = NSWindow; 
+                loadingIndicator = NSProgressIndicator; 
+                loadingText = NSTextField; 
+                previewButton = NSButton; 
+                progress = NSProgressIndicator; 
+                removeCity = NSButton; 
+                search = NSButton; 
+                searchResultsTable = NSTableView; 
+                searchSheet = NSWindow; 
+                searchTerm = NSTextField; 
+                serverTable = NSTableView; 
+                tabView = NSTabView; 
+                useCustomRadarImage = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencesModule; 
+        }, 
+        {
+            ACTIONS = {apply = id; cancel = id; ok = id; selectModule = id; }; 
+            CLASS = NSPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                cancelButton = id; 
+                moduleMatrix = id; 
+                okButton = id; 
+                preferencesPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSPreferencesModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_preferencesView" = NSBox; preferencesView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSTableColumn; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
