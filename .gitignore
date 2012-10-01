@@ -1,4 +1,5 @@
 *.dmg
+wc/
 build/
 .DS_Store
 
