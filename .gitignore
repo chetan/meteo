@@ -1,0 +1,7 @@
+*.dmg
+build/
+.DS_Store
+
+Meteorologist.xcodeproj/project.xcworkspace/
+Meteorologist.xcodeproj/xcuserdata/
+
