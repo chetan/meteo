@@ -483,11 +483,13 @@ void catchException(NSException *exception)
 
 - (void)otherMeteoWasLaunched:(NSNotification *)not
 {
-    [NSApp terminate:nil];
+    NSLog(@"otherMeteoWasLaunched() notification received ???");
+    // [NSApp terminate:nil];
 } // otherMeteoWasLaunched
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
+    NSLog(@"applicationShouldTerminate()");
     [prefsController checkUnsavedPrefs];
     [prefsController outletAction:nil];
 
